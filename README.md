@@ -5,6 +5,7 @@
 - Connecting MongoDB.
 - Adding sign in functionality and Google authentication.
 - Creating users profiles and functionality to edit them.
+- Implementing files upload functionality.
 - Work in progress.
 
 ## Built with
