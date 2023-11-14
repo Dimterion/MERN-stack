@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function Contact({ listing }) {
   const [poster, setPoster] = useState(null);
@@ -53,3 +54,7 @@ export default function Contact({ listing }) {
     </>
   );
 }
+
+Contact.propTypes = {
+  listing: PropTypes.object,
+};

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaLink } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 export default function ListingItem({ listing }) {
   return (
@@ -49,3 +50,7 @@ export default function ListingItem({ listing }) {
     </div>
   );
 }
+
+ListingItem.propTypes = {
+  listing: PropTypes.object,
+};
