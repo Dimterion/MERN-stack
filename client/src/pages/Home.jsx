@@ -7,6 +7,7 @@ import "swiper/css/bundle";
 import ListingItem from "../components/ListingItem";
 
 export default function Home() {
+  const [showContent, setShowContent] = useState(false);
   const [offerListings, setOfferListings] = useState([]);
   const [oneTimePurchaseListings, setOneTimePurchaseListings] = useState([]);
   const [subscriptionListings, setSubscriptionListings] = useState([]);
@@ -54,25 +55,29 @@ export default function Home() {
     fetchOfferListings();
   }, []);
 
-  return (
+  return !showContent ? (
+    <button onClick={() => setShowContent(true)} className="home-startBtn">
+      Comply
+    </button>
+  ) : (
     <div>
       {/* Top */}
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-slate-700 font-bold text-3xl lg:text-6xl">
-          Find your next <span className="text-slate-500">coding</span>
+        <h1 className="font-bold text-3xl lg:text-6xl">
+          Find your prime <span style={{ color: "#058c42" }}>coding</span>
           <br />
-          resource.
+          directives
         </h1>
         <div className="text-gray-400 text-xs sm:text-sm">
-          MERN Stack.
+          Senior dev or half-stack
           <br />
-          Choose from various sources.
+          you are coding with me
         </div>
         <Link
           to={"/search"}
           className="text-xs sm:text-sm text-blue-800 font-bold hover:underline"
         >
-          Start
+          Commence
         </Link>
       </div>
       {/* Swiper */}
@@ -94,7 +99,7 @@ export default function Home() {
       {/* Listings results */}
       <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-10">
         {offerListings && offerListings.length > 0 && (
-          <div>
+          <>
             <div className="my-3">
               <h2 className="text-2xl font-semibold text-slate-600">
                 Recent offers
@@ -111,10 +116,10 @@ export default function Home() {
                 <ListingItem listing={listing} key={listing._id} />
               ))}
             </div>
-          </div>
+          </>
         )}
         {subscriptionListings && subscriptionListings.length > 0 && (
-          <div>
+          <>
             <div className="my-3">
               <h2 className="text-2xl font-semibold text-slate-600">
                 Recent subscriptions
@@ -131,10 +136,10 @@ export default function Home() {
                 <ListingItem listing={listing} key={listing._id} />
               ))}
             </div>
-          </div>
+          </>
         )}
         {oneTimePurchaseListings && oneTimePurchaseListings.length > 0 && (
-          <div>
+          <>
             <div className="my-3">
               <h2 className="text-2xl font-semibold text-slate-600">
                 Recent one-time purchases
@@ -151,7 +156,7 @@ export default function Home() {
                 <ListingItem listing={listing} key={listing._id} />
               ))}
             </div>
-          </div>
+          </>
         )}
       </div>
     </div>
