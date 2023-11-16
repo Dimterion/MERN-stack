@@ -68,16 +68,13 @@ export default function Home() {
           <br />
           directives
         </h1>
-        <div className="text-gray-400 text-xs sm:text-sm">
+        <div className="home-subHeading">
           Senior dev or half-stack
           <br />
           you are coding with me
         </div>
-        <Link
-          to={"/search"}
-          className="text-xs sm:text-sm text-blue-800 font-bold hover:underline"
-        >
-          Commence
+        <Link to={"/search"} className="font-bold hover:underline">
+          Commence search
         </Link>
       </div>
       {/* Swiper */}

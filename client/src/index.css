@@ -6,6 +6,15 @@
 
 /* General styling */
 
+:root {
+  /* Variables - Main Colors */
+  --primary: #020202;
+  --secondary: #16db65;
+  --tertiary: #058c42;
+  --additional: #04471c;
+  --sub: #0d2818;
+}
+
 body {
   background-color: #020202;
   color: #16db65;
@@ -45,4 +54,8 @@ body {
   color: #020202;
   background-color: #16db65;
   transition: 0.5s;
+}
+
+.home-subHeading {
+  color: #058c42;
 }
