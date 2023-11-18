@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 export default function ListingItem({ listing }) {
   return (
-    <div className="bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]">
+    <article className="listingItem-article overflow-hidden w-full sm:w-[330px]">
       <Link to={`/listing/${listing._id}`}>
         <img
           src={
@@ -47,7 +47,7 @@ export default function ListingItem({ listing }) {
           </div>
         </div>
       </Link>
-    </div>
+    </article>
   );
 }
 

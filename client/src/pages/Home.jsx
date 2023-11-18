@@ -98,11 +98,9 @@ export default function Home() {
         {offerListings && offerListings.length > 0 && (
           <>
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">
-                Recent offers
-              </h2>
+              <h2 className="text-2xl font-semibold">Recent offers</h2>
               <Link
-                className="text-sm text-blue-800 hover:underline"
+                className="text-sm hover:underline"
                 to={"/search?offer=true"}
               >
                 Show more offers
@@ -118,11 +116,9 @@ export default function Home() {
         {subscriptionListings && subscriptionListings.length > 0 && (
           <>
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">
-                Recent subscriptions
-              </h2>
+              <h2 className="text-2xl font-semibold">Recent subscriptions</h2>
               <Link
-                className="text-sm text-blue-800 hover:underline"
+                className="text-sm hover:underline"
                 to={"/search?type=subscription"}
               >
                 Show more subscriptions
@@ -138,11 +134,11 @@ export default function Home() {
         {oneTimePurchaseListings && oneTimePurchaseListings.length > 0 && (
           <>
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">
+              <h2 className="text-2xl font-semibold">
                 Recent one-time purchases
               </h2>
               <Link
-                className="text-sm text-blue-800 hover:underline"
+                className="text-sm hover:underline"
                 to={"/search?type=oneTimePurchase"}
               >
                 Show more one-time purchases
