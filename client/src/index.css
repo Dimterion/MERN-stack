@@ -34,26 +34,116 @@ body {
 
 /* Home Page */
 
+.home-startBtnSection {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #979dac;
+}
+
+.home-startBtnWrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+  border: 2rem solid #979dac;
+  background-color: var(--primary);
+  border-radius: 10%;
+}
+
+.home-startBtnWrap h1 {
+  font-size: 4rem;
+  animation: typingHeading 2s steps(8);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 347px;
+}
+
+@keyframes typingHeading {
+  from {
+    width: 0;
+  }
+}
+
+.home-startBtnWrap h1 span {
+  color: var(--tertiary);
+}
+
+.home-startBtnWrap p {
+  font-size: 2rem;
+  animation: 4s typingParagraph 2s steps(35) both;
+  width: 620px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typingParagraph {
+  from {
+    width: 0;
+  }
+}
+
+.home-complyBtnWrap {
+  font-size: 2rem;
+  animation: 1s btnAppear 6s both;
+}
+
+@keyframes btnAppear {
+  from {
+    display: none;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.home-complyBtnWrap button {
+  border: 2px solid var(--secondary);
+  width: 500px;
+  padding: 5px 15px 4px;
+  text-align: start;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.home-complyBtnWrap button:hover {
+  opacity: 1;
+}
+
 .home-startBtn {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 200px;
-  max-width: 90vw;
-  height: 50px;
-  border: 3px solid var(--secondary);
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: 5px solid black;
+  color: black;
+  padding: 2px;
   cursor: pointer;
-  text-transform: uppercase;
-  font-size: 2rem;
   transition: 0.5s;
 }
 
-.home-startBtn:hover {
-  color: var(--primary);
-  background-color: var(--secondary);
+.home-startBtn:active {
+  scale: 0.9;
   transition: 0.5s;
+}
+
+.active-btn {
+  color: red;
 }
 
 .home-subHeading {
