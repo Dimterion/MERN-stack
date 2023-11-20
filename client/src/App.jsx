@@ -9,12 +9,10 @@ import Listing from "./pages/Listing";
 import Profile from "./pages/Profile";
 import CreateListing from "./pages/CreateListing";
 import UpdateListing from "./pages/UpdateListing";
-import Header from "./components/Header";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-in" element={<SignIn />} />
