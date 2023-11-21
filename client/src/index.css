@@ -8,11 +8,11 @@
 
 :root {
   /* Variables - Main Colors */
-  --primary: #020202;
-  --secondary: #16db65;
-  --tertiary: #058c42;
-  --additional: #04471c;
-  --sub: #0d2818;
+  --primary: #081c15;
+  --secondary: #74c69d;
+  --tertiary: #2d6a4f;
+  --additional: #1b4332;
+  --sub: #2d6a4f;
 }
 
 body {
@@ -75,7 +75,8 @@ body {
   height: 100%;
   background: var(--secondary);
   left: 50%;
-  opacity: 0.3;
+  opacity: 0.1;
+  animation: 0.5s home-line 1.3s linear;
 }
 
 .home-horizontalLine {
@@ -84,11 +85,43 @@ body {
   height: 2px;
   background: var(--secondary);
   top: 50%;
-  opacity: 0.3;
+  opacity: 0.1;
+  animation: 0.5s home-line 1.3s linear;
+}
+
+@keyframes home-line {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
 }
 
 .home-asideInner {
-  border: 3px solid rgba(22, 219, 101, 0.3);
+  border: 3px solid rgba(116, 198, 157, 0.3);
+  animation: home-asideInner 1.5s linear;
+}
+
+@keyframes home-asideInner {
+  0% {
+    padding: 10rem 1rem;
+    border: 3px solid rgba(116, 198, 157, 0.3);
+  }
+
+  80% {
+    padding: 5rem 0.75rem;
+    border: 3px solid rgba(116, 198, 157, 0.3);
+  }
+
+  90% {
+    border: 3px solid rgba(116, 198, 157, 1);
+  }
+
+  100% {
+    border: 3px solid rgba(116, 198, 157, 1);
+  }
 }
 
 .swiper-button-prev,
@@ -102,7 +135,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #979dac;
+  background-color: #adb5bd;
 }
 
 .home-startBtnWrap {
@@ -117,7 +150,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: auto;
-  border: 2rem solid #979dac;
+  border: 2rem solid #adb5bd;
   background-color: var(--primary);
   border-radius: 10%;
 }
@@ -207,15 +240,15 @@ body {
   width: 30px;
   height: 30px;
   margin: 2.5px;
-  border: 2px solid black;
-  color: black;
+  border: 2px solid var(--primary);
+  color: var(--primary);
   padding: 5px;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
 }
 
 .active-btn {
-  color: red;
+  color: var(--secondary);
 }
 
 .home-subHeading {

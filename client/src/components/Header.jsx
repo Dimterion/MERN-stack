@@ -35,7 +35,7 @@ export default function Header() {
       <Link to="/">
         <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
           <span>ROBO</span>
-          <span style={{ color: "#058c42" }}>CODE</span>
+          <span style={{ color: "#2d6a4f" }}>CODE</span>
         </h1>
       </Link>
       <form
