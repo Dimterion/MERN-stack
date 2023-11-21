@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { FaRegIdCard, FaSearch } from "react-icons/fa";
+import { FaCodeBranch, FaCrosshairs, FaRegIdCard } from "react-icons/fa";
 
 export default function Header() {
   const { currentUser } = useSelector((state) => state.user);
@@ -31,16 +31,16 @@ export default function Header() {
   }, [location.search]);
 
   return (
-    <header className="header-header flex justify-between items-center p-3">
+    <header className="flex justify-between items-center p-3">
       <Link to="/">
         <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-          <span style={{ color: "#058c42" }}>ROBO</span>
-          <span>CODE</span>
+          <span>ROBO</span>
+          <span style={{ color: "#058c42" }}>CODE</span>
         </h1>
       </Link>
       <form
         onSubmit={handleSubmit}
-        className="header-form p-3 flex items-center"
+        className="header-form p-2 flex items-center"
       >
         <input
           type="text"
@@ -50,10 +50,10 @@ export default function Header() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button>
-          <FaSearch style={{ color: "#058c42" }} />
+          <FaCrosshairs style={{ color: "#058c42" }} />
         </button>
       </form>
-      <ul className="flex gap-4 text-center items-center">
+      <ul className="flex gap-3 text-center items-center flex-wrap justify-around">
         <Link to="/profile">
           {currentUser ? (
             <img
@@ -62,11 +62,15 @@ export default function Header() {
               alt="Profile image."
             />
           ) : (
-            <li>Log in</li>
+            <li className="header-li">
+              <FaCodeBranch />
+            </li>
           )}
         </Link>
         <Link to="/about">
-          <li className=""><FaRegIdCard /></li>
+          <li className="header-li">
+            <FaRegIdCard />
+          </li>
         </Link>
       </ul>
     </header>
