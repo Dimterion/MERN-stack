@@ -32,6 +32,11 @@ body {
   border: 3px solid var(--tertiary);
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--secondary);
+}
+
 /* Home Page */
 
 .home-startBtnSection {
@@ -66,11 +71,18 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 347px;
+  max-width: 75vw;
 }
 
 @keyframes typingHeading {
   from {
     width: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-startBtnWrap h1 {
+    font-size: 2rem;
   }
 }
 
@@ -82,6 +94,7 @@ body {
   font-size: 2rem;
   animation: 4s typingParagraph 2s steps(35) both;
   width: 620px;
+  max-width: 75vw;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -89,6 +102,12 @@ body {
 @keyframes typingParagraph {
   from {
     width: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-startBtnWrap p {
+    font-size: 0.75rem;
   }
 }
 
@@ -112,6 +131,7 @@ body {
 .home-complyBtnWrap button {
   border: 2px solid var(--secondary);
   width: 500px;
+  max-width: 55vw;
   padding: 5px 15px 4px;
   text-align: start;
   margin-top: 2rem;
@@ -129,17 +149,12 @@ body {
   right: 0;
   width: 30px;
   height: 30px;
-  margin: 5px;
-  border: 5px solid black;
+  margin: 2.5px;
+  border: 2px solid black;
   color: black;
-  padding: 2px;
+  padding: 5px;
   cursor: pointer;
-  transition: 0.5s;
-}
-
-.home-startBtn:active {
-  scale: 0.9;
-  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .active-btn {
