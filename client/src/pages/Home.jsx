@@ -87,21 +87,25 @@ export default function Home() {
     <div>
       <Header />
       {/* Top */}
-      <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="font-bold text-3xl lg:text-6xl">
-          Find your prime <span style={{ color: "#058c42" }}>coding</span>
-          <br />
-          directives
-        </h1>
-        <div className="home-subHeading">
-          Senior dev or half-stack
-          <br />
-          you are coding with me
+      <aside className="home-aside my-4">
+        <div className="home-verticalLine"></div>
+        <div className="home-horizontalLine"></div>
+        <div className="home-asideInner flex flex-col gap-4 p-20 px-3 md:w-1/4 w-3/5 max-w-6xl mx-auto my-40">
+          <h1 className="font-bold text-3xl lg:text-6xl">
+            Find your prime <span style={{ color: "#058c42" }}>coding</span>
+            <br />
+            directives
+          </h1>
+          <div className="home-subHeading">
+            Senior dev or half-stack
+            <br />
+            you are coding with me
+          </div>
+          <Link to={"/search"} className="font-bold hover:underline">
+            {">> "}Commence search
+          </Link>
         </div>
-        <Link to={"/search"} className="font-bold hover:underline">
-          Commence search
-        </Link>
-      </div>
+      </aside>
       {/* Swiper */}
       <Swiper navigation>
         {offerListings &&

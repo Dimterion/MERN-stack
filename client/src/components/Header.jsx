@@ -53,7 +53,7 @@ export default function Header() {
           <FaCrosshairs style={{ color: "#058c42" }} />
         </button>
       </form>
-      <ul className="flex gap-3 text-center items-center flex-wrap justify-around">
+      <ul className="flex gap-3 mx-1 text-center items-center flex-wrap justify-around">
         <Link to="/profile">
           {currentUser ? (
             <img
@@ -62,13 +62,13 @@ export default function Header() {
               alt="Profile image."
             />
           ) : (
-            <li className="header-li">
+            <li className="header-li mx-1">
               <FaCodeBranch />
             </li>
           )}
         </Link>
         <Link to="/about">
-          <li className="header-li">
+          <li className="header-li mx-1">
             <FaRegIdCard />
           </li>
         </Link>
