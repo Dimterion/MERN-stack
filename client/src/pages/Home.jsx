@@ -9,7 +9,13 @@ import Header from "../components/Header";
 import ListingItem from "../components/ListingItem";
 
 export default function Home() {
-  const [content, setContent] = useState("turnedOff");
+  const [content, setContent] = useState(
+    localStorage.content && localStorage.content !== ""
+      ? localStorage.content
+      : localStorage.content === ""
+      ? ""
+      : "turnedOff"
+  );
   const [offerListings, setOfferListings] = useState([]);
   const [oneTimePurchaseListings, setOneTimePurchaseListings] = useState([]);
   const [subscriptionListings, setSubscriptionListings] = useState([]);
@@ -60,7 +66,13 @@ export default function Home() {
   return content === "turnedOff" ? (
     <section className="home-startBtnSection">
       <div className="home-startBtnWrap"></div>
-      <button onClick={() => setContent("initial")} className="home-startBtn">
+      <button
+        onClick={() => {
+          setContent("initial");
+          localStorage.setItem("content", "initial");
+        }}
+        className="home-startBtn"
+      >
         <FaPowerOff />
       </button>{" "}
     </section>
@@ -73,11 +85,21 @@ export default function Home() {
         <p>You must comply to proceed, citizen.</p>
         <div className="home-complyBtnWrap">
           <span>{"> "}</span>
-          <button onClick={() => setContent("")}>Comply</button>
+          <button
+            onClick={() => {
+              localStorage.setItem("content", "");
+              setContent("");
+            }}
+          >
+            Comply
+          </button>
         </div>
       </div>
       <button
-        onClick={() => setContent("turnedOff")}
+        onClick={() => {
+          localStorage.setItem("content", "turnedOff");
+          setContent("turnedOff");
+        }}
         className={`home-startBtn ${content === "initial" && "active-btn"}`}
       >
         <FaPowerOff />
@@ -85,9 +107,9 @@ export default function Home() {
     </section>
   ) : (
     <div>
-      <Header />
+      <Header header={"header-header"} />
       {/* Top */}
-      <aside className="home-aside my-4">
+      <aside className="home-aside">
         <div className="home-verticalLine"></div>
         <div className="home-horizontalLine"></div>
         <div className="home-asideInner flex flex-col gap-4 p-20 px-3 md:w-1/4 w-3/5 max-w-6xl mx-auto my-40">

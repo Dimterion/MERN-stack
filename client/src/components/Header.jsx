@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaCodeBranch, FaCrosshairs, FaRegIdCard } from "react-icons/fa";
+import PropTypes from "prop-types";
 
-export default function Header() {
+export default function Header({ header }) {
   const { currentUser } = useSelector((state) => state.user);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -31,7 +32,7 @@ export default function Header() {
   }, [location.search]);
 
   return (
-    <header className="flex justify-between items-center p-3">
+    <header className={`${header} flex justify-between items-center p-3`}>
       <Link to="/">
         <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
           <span>ROBO</span>
@@ -76,3 +77,7 @@ export default function Header() {
     </header>
   );
 }
+
+Header.propTypes = {
+  header: PropTypes.string,
+};

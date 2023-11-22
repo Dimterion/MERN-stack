@@ -23,6 +23,20 @@ body {
 
 /* Header */
 
+.header-header {
+  animation: 0.5s header-load 1.5s linear both;
+}
+
+@keyframes header-load {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .header-form {
   background-color: var(--additional);
   border: 3px solid var(--tertiary);
