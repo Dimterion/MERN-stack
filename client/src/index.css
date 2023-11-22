@@ -8,11 +8,12 @@
 
 :root {
   /* Variables - Main Colors */
+
   --primary: #081c15;
-  --secondary: #74c69d;
+  --secondary: #52b788;
   --tertiary: #2d6a4f;
   --additional: #1b4332;
-  --sub: #2d6a4f;
+  --sub: #40916c;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
   font-family: "Kdam Thmor Pro", sans-serif;
 }
 
-/* Header */
+/* Header Component */
 
 .header-header {
   animation: 0.5s header-load 1.5s linear both;
@@ -277,4 +278,26 @@ body {
 
 .listingItem-article {
   border: 1px solid var(--tertiary);
+}
+
+/* Sign In Page */
+
+.signIn-section {
+  border-top: 2px solid var(--secondary);
+}
+
+.signIn-form input {
+  background-color: var(--additional);
+  border: 3px solid var(--tertiary);
+}
+
+.signIn-form button {
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.signIn-signUpLink {
+  color: var(--tertiary);
+  text-decoration: underline;
 }
