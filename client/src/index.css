@@ -301,3 +301,9 @@ body {
   color: var(--tertiary);
   text-decoration: underline;
 }
+
+.profile-link {
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  color: var(--secondary);
+}

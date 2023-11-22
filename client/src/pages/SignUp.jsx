@@ -84,7 +84,7 @@ export default function SignUp() {
           />
           <button
             disabled={loading}
-            className="p-3 uppercase hover:opacity-95 disabled:opacity-80"
+            className="p-3 uppercase hover:opacity-70 disabled:opacity-80"
           >
             {loading ? "Loading..." : "Sign Up"}
           </button>
