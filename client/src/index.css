@@ -39,8 +39,8 @@ body {
 .header-li::before {
   content: "";
   position: absolute;
-  top: -0.2rem;
-  left: -0.2rem;
+  top: -0.25rem;
+  left: -0.25rem;
   width: calc(100% + 0.5rem);
   height: 5px;
   max-width: 95vw;
@@ -52,14 +52,18 @@ body {
 .header-li::after {
   content: "";
   position: absolute;
-  right: -0.3rem;
-  bottom: -0.3rem;
+  right: -0.25rem;
+  bottom: -0.25rem;
   width: calc(100% + 0.5rem);
   height: 5px;
   max-width: 95vw;
   border-right: 1px solid var(--secondary);
   border-bottom: 1px solid var(--secondary);
   border-left: 1px solid var(--secondary);
+}
+
+.header-li:hover {
+  color: var(--sub);
 }
 
 /* Home Page */

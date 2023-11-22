@@ -50,7 +50,7 @@ export default function Header() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button>
-          <FaCrosshairs style={{ color: "#058c42" }} />
+          <FaCrosshairs style={{ color: "#74c69d" }} />
         </button>
       </form>
       <ul className="flex gap-3 mx-1 text-center items-center flex-wrap justify-around">
