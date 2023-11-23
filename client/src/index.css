@@ -286,7 +286,8 @@ body {
   border-top: 2px solid var(--secondary);
 }
 
-.signIn-form input {
+.signIn-form input,
+.signIn-form textarea {
   background-color: var(--additional);
   border: 3px solid var(--tertiary);
 }
