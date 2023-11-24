@@ -191,157 +191,137 @@ export default function UpdateListing() {
       <header>
         <Header />
       </header>
-      <main className="p-3 max-w-4xl mx-auto">
-        <h1 className="text-3xl font-semibold text-center my-7">
-          Update listing
-        </h1>
-        <form
-          onSubmit={handleSubmit}
-          className="signIn-form flex flex-col sm:flex-row gap-4"
-        >
-          <div className="flex flex-col gap-4 flex-1">
-            <input
-              type="text"
-              placeholder="Name"
-              className="border p-3"
-              id="name"
-              maxLength="60"
-              minLength="5"
-              required
-              onChange={handleChange}
-              value={formData.name}
-            />
-            <textarea
-              type="text"
-              placeholder="Description"
-              className="border p-3"
-              id="description"
-              required
-              onChange={handleChange}
-              value={formData.description}
-            />
-            <input
-              type="text"
-              placeholder="Link"
-              className="border p-3"
-              id="link"
-              required
-              onChange={handleChange}
-              value={formData.link}
-            />
-            <div className="flex gap-6 flex-wrap">
-              <div className="flex gap-2">
-                <input
-                  type="checkbox"
-                  id="oneTimePurchase"
-                  className="w-5"
-                  onChange={handleChange}
-                  checked={formData.type === "oneTimePurchase"}
-                />
-                <span>One-time purchase</span>
-              </div>
-              <div className="flex gap-2">
-                <input
-                  type="checkbox"
-                  id="subscription"
-                  className="w-5"
-                  onChange={handleChange}
-                  checked={formData.type === "subscription"}
-                />
-                <span>Subscription</span>
-              </div>
-              <div className="flex gap-2">
-                <input
-                  type="checkbox"
-                  id="certificate"
-                  className="w-5"
-                  onChange={handleChange}
-                  checked={formData.certificate}
-                />
-                <span>Certificate</span>
-              </div>
-              <div className="flex gap-2">
-                <input
-                  type="checkbox"
-                  id="community"
-                  className="w-5"
-                  onChange={handleChange}
-                  checked={formData.community}
-                />
-                <span>Community</span>
-              </div>
-              <div className="flex gap-2">
-                <input
-                  type="checkbox"
-                  id="offer"
-                  className="w-5"
-                  onChange={handleChange}
-                  checked={formData.offer}
-                />
-                <span>Offer</span>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-6">
-              <div className="flex items-center gap-2">
-                <input
-                  type="number"
-                  id="hours"
-                  min="1"
-                  max="10000"
-                  required
-                  className="p-3 border border-gray-300"
-                  onChange={handleChange}
-                  value={formData.hours}
-                />
-                <p>Hours</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <input
-                  type="number"
-                  id="parts"
-                  min="1"
-                  max="10000"
-                  required
-                  className="p-3 border border-gray-300"
-                  onChange={handleChange}
-                  value={formData.parts}
-                />
-                <p>Parts</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <input
-                  type="number"
-                  id="regularPrice"
-                  min="0"
-                  max="10000"
-                  required
-                  className="p-3 border border-gray-300"
-                  onChange={handleChange}
-                  value={formData.regularPrice}
-                />
-                <div className="flex flex-col items-center">
-                  <p>Regular price ($)</p>
-                  {formData.type === "subscription" && (
-                    <span className="text-xs">
-                      {"("}per month{")"}
-                    </span>
-                  )}
+      <main className="signIn-section">
+        <section className="p-3 max-w-4xl mx-auto">
+          <h1 className="text-3xl font-semibold text-center my-7">
+            Update listing
+          </h1>
+          <form
+            onSubmit={handleSubmit}
+            className="signIn-form flex flex-col sm:flex-row gap-4"
+          >
+            <div className="flex flex-col gap-4 flex-1">
+              <input
+                type="text"
+                placeholder="Name"
+                className="border p-3"
+                id="name"
+                maxLength="60"
+                minLength="5"
+                required
+                onChange={handleChange}
+                value={formData.name}
+              />
+              <textarea
+                type="text"
+                placeholder="Description"
+                className="border p-3"
+                id="description"
+                required
+                onChange={handleChange}
+                value={formData.description}
+              />
+              <input
+                type="text"
+                placeholder="Link"
+                className="border p-3"
+                id="link"
+                required
+                onChange={handleChange}
+                value={formData.link}
+              />
+              <div className="flex gap-6 flex-wrap">
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="oneTimePurchase"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={formData.type === "oneTimePurchase"}
+                  />
+                  <span>One-time purchase</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="subscription"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={formData.type === "subscription"}
+                  />
+                  <span>Subscription</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="certificate"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={formData.certificate}
+                  />
+                  <span>Certificate</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="community"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={formData.community}
+                  />
+                  <span>Community</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="offer"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={formData.offer}
+                  />
+                  <span>Offer</span>
                 </div>
               </div>
-              {formData.offer && (
+              <div className="flex flex-wrap gap-6">
                 <div className="flex items-center gap-2">
                   <input
                     type="number"
-                    id="discountPrice"
+                    id="hours"
+                    min="1"
+                    max="10000"
+                    required
+                    className="p-3 border border-gray-300"
+                    onChange={handleChange}
+                    value={formData.hours}
+                  />
+                  <p>Hours</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="number"
+                    id="parts"
+                    min="1"
+                    max="10000"
+                    required
+                    className="p-3 border border-gray-300"
+                    onChange={handleChange}
+                    value={formData.parts}
+                  />
+                  <p>Parts</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="number"
+                    id="regularPrice"
                     min="0"
                     max="10000"
                     required
                     className="p-3 border border-gray-300"
                     onChange={handleChange}
-                    value={formData.discountPrice}
+                    value={formData.regularPrice}
                   />
                   <div className="flex flex-col items-center">
-                    <p>Discounted price ($)</p>
+                    <p>Regular price ($)</p>
                     {formData.type === "subscription" && (
                       <span className="text-xs">
                         {"("}per month{")"}
@@ -349,66 +329,88 @@ export default function UpdateListing() {
                     )}
                   </div>
                 </div>
-              )}
+                {formData.offer && (
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="number"
+                      id="discountPrice"
+                      min="0"
+                      max="10000"
+                      required
+                      className="p-3 border border-gray-300"
+                      onChange={handleChange}
+                      value={formData.discountPrice}
+                    />
+                    <div className="flex flex-col items-center">
+                      <p>Discounted price ($)</p>
+                      {formData.type === "subscription" && (
+                        <span className="text-xs">
+                          {"("}per month{")"}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col flex-1 gap-4">
-            <p className="font-semibold">
-              Images:
-              <span className="font-normal text-gray-600 ml-2">
-                The first image will be the cover (max 6).
-              </span>
-            </p>
-            <div className="flex gap-4">
-              <input
-                onChange={(e) => setFiles(e.target.files)}
-                className="p-3 border border-gray-300 w-full"
-                type="file"
-                id="images"
-                accept="image/*"
-                multiple
-              />
-              <button
-                type="button"
-                disabled={uploading}
-                onClick={handleImageSubmit}
-                className="p-3 text-green-700 border border-green-700 uppercase hover:shadow-lg disabled:opacity-80"
-              >
-                {uploading ? "Uploading..." : "Upload"}
-              </button>
-            </div>
-            <p className="text-red-700 text-sm">
-              {imageUploadError && imageUploadError}
-            </p>
-            {formData.imageUrls.length > 0 &&
-              formData.imageUrls.map((url, index) => (
-                <div
-                  key={url}
-                  className="flex justify-between p-3 border items-center"
+            <div className="flex flex-col flex-1 gap-4">
+              <p className="font-semibold">
+                Images:
+                <span className="font-normal text-gray-600 ml-2">
+                  The first image will be the cover (max 6).
+                </span>
+              </p>
+              <div className="flex gap-4">
+                <input
+                  onChange={(e) => setFiles(e.target.files)}
+                  className="p-3 border border-gray-300 w-full"
+                  type="file"
+                  id="images"
+                  accept="image/*"
+                  multiple
+                />
+                <button
+                  type="button"
+                  disabled={uploading}
+                  onClick={handleImageSubmit}
+                  className="p-3 text-green-700 border border-green-700 uppercase hover:shadow-lg disabled:opacity-80"
                 >
-                  <img
-                    src={url}
-                    alt="Listing image."
-                    className="w-20 h-20 object-contain"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => handleRemoveImage(index)}
-                    className="p-3 text-red-700  uppercase hover:opacity-75"
+                  {uploading ? "Uploading..." : "Upload"}
+                </button>
+              </div>
+              <p className="text-red-700 text-sm">
+                {imageUploadError && imageUploadError}
+              </p>
+              {formData.imageUrls.length > 0 &&
+                formData.imageUrls.map((url, index) => (
+                  <div
+                    key={url}
+                    className="flex justify-between p-3 border items-center"
                   >
-                    Delete
-                  </button>
-                </div>
-              ))}
-            <button
-              disabled={loading || uploading}
-              className="p-3 bg-slate-700 text-white  uppercase hover:opacity-95 disabled:opacity-80"
-            >
-              {loading ? "Updating listing..." : "Update listing"}
-            </button>
-            {error && <p className="text-red-700 text-sm">{error}</p>}
-          </div>
-        </form>
+                    <img
+                      src={url}
+                      alt="Listing image."
+                      className="w-20 h-20 object-contain"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => handleRemoveImage(index)}
+                      className="p-3 text-red-700  uppercase hover:opacity-75"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                ))}
+              <button
+                disabled={loading || uploading}
+                className="p-3 bg-slate-700 text-white  uppercase hover:opacity-95 disabled:opacity-80"
+              >
+                {loading ? "Updating listing..." : "Update listing"}
+              </button>
+              {error && <p className="text-red-700 text-sm">{error}</p>}
+            </div>
+          </form>
+        </section>
       </main>
     </>
   );
