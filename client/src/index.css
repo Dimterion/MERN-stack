@@ -361,3 +361,20 @@ body {
   color: var(--primary);
   border: 2px solid var(--secondary);
 }
+
+.about-skill {
+  border: 2px solid transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.about-skill:hover {
+  border: 2px solid var(--secondary);
+}
+
+.about-skillName {
+  border: 2px solid var(--secondary);
+  width: 150px;
+  text-align: center;
+  padding: 5px 10px 4px;
+}
