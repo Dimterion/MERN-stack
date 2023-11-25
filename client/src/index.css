@@ -308,3 +308,56 @@ body {
   border: 3px solid var(--secondary);
   color: var(--secondary);
 }
+
+/* About Page */
+
+.about-ul li {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  cursor: pointer;
+  width: 150px;
+}
+
+.about-ul li::after {
+  content: "";
+  position: absolute;
+  right: -0.25rem;
+  bottom: -0.1rem;
+  width: calc(100% + 0.5rem);
+  height: 5px;
+  max-width: 95vw;
+  border-right: 2px solid var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+  border-left: 2px solid var(--secondary);
+}
+
+.about-ulLiActive::before {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  width: calc(100% + 0.5rem);
+  height: 25px;
+  max-width: 95vw;
+  border-top: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary);
+  border-left: 2px solid var(--secondary);
+}
+
+.about-cube {
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--secondary);
+}
+
+.about-cubeActive {
+  width: 35px;
+  height: 35px;
+  background: var(--secondary);
+  color: var(--primary);
+  border: 2px solid var(--secondary);
+}
