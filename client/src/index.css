@@ -13,7 +13,7 @@
   --secondary: #52b788;
   --tertiary: #2d6a4f;
   --additional: #1b4332;
-  --sub: #40916c;
+  --sub: #adb5bd;
 }
 
 body {
@@ -78,7 +78,7 @@ body {
 }
 
 .header-li:hover {
-  color: var(--sub);
+  color: var(--tertiary);
 }
 
 /* Home Page */
@@ -149,12 +149,7 @@ body {
 }
 
 .home-startBtnSection {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #adb5bd;
+  background-color: var(--sub);
 }
 
 .home-startBtnWrap {
@@ -169,7 +164,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: auto;
-  border: 2rem solid #adb5bd;
+  border: 2rem solid var(--sub);
   background-color: var(--primary);
   border-radius: 10%;
 }
@@ -221,8 +216,11 @@ body {
 }
 
 .home-complyBtnWrap {
+  margin-top: 2rem;
   font-size: 2rem;
   animation: 1s btnAppear 6s both;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
 @keyframes btnAppear {
@@ -233,19 +231,18 @@ body {
 
   to {
     opacity: 1;
-    display: block;
+    display: flex;
   }
 }
 
 .home-complyBtnWrap button {
   border: 2px solid var(--secondary);
-  width: 500px;
-  max-width: 55vw;
+  width: 200px;
+  max-width: 50vw;
   padding: 5px 15px 4px;
-  text-align: start;
-  margin-top: 2rem;
   text-transform: uppercase;
   opacity: 0.5;
+  font-size: 1.5rem;
 }
 
 .home-complyBtnWrap button:hover {
@@ -256,12 +253,10 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 30px;
-  height: 30px;
   margin: 2.5px;
   border: 2px solid var(--primary);
   color: var(--primary);
-  padding: 5px;
+  padding: 4px;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
 }

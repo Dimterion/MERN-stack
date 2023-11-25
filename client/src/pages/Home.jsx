@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaPowerOff } from "react-icons/fa";
+import { FaChevronRight, FaPowerOff } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Navigation } from "swiper/modules";
@@ -64,27 +64,27 @@ export default function Home() {
   }, []);
 
   return content === "turnedOff" ? (
-    <section className="home-startBtnSection">
+    <section className="home-startBtnSection fixed top-0 right-0 bottom-0 left-0">
       <div className="home-startBtnWrap"></div>
       <button
         onClick={() => {
           setContent("initial");
           localStorage.setItem("content", "initial");
         }}
-        className="home-startBtn"
+        className="home-startBtn transition-transform active:scale-90"
       >
         <FaPowerOff />
       </button>{" "}
     </section>
   ) : content === "initial" ? (
-    <section className="home-startBtnSection">
+    <section className="home-startBtnSection fixed top-0 right-0 bottom-0 left-0">
       <div className="home-startBtnWrap">
         <h1>
           ROBO<span>CODE</span>
         </h1>
         <p>You must comply to proceed, citizen.</p>
         <div className="home-complyBtnWrap">
-          <span>{"> "}</span>
+          <FaChevronRight />
           <button
             onClick={() => {
               localStorage.setItem("content", "");
@@ -100,7 +100,9 @@ export default function Home() {
           localStorage.setItem("content", "turnedOff");
           setContent("turnedOff");
         }}
-        className={`home-startBtn ${content === "initial" && "active-btn"}`}
+        className={`home-startBtn transition-transform active:scale-90 ${
+          content === "initial" && "active-btn"
+        }`}
       >
         <FaPowerOff />
       </button>
