@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 import ListingItem from "../components/ListingItem";
 
 export default function Search() {
@@ -140,135 +141,139 @@ export default function Search() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row">
-      <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen md:max-w-md">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-          <div className="flex items-center gap-2">
-            <label className="whitespace-nowrap font-semibold">
-              Search term:
-            </label>
-            <input
-              type="text"
-              id="searchTerm"
-              placeholder="Search..."
-              className="border rounded-lg p-3 w-full"
-              value={sidebarData.searchTerm}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex gap-2 flex-wrap items-center">
-            <label className="font-semibold">Type:</label>
-            <div className="flex gap-2">
-              <input
-                type="checkbox"
-                id="all"
-                className="w-5"
-                onChange={handleChange}
-                checked={sidebarData.type === "all"}
-              />
-              <span>One-time purchase & subscription</span>
-            </div>
-            <div className="flex gap-2">
-              <input
-                type="checkbox"
-                id="subscription"
-                className="w-5"
-                onChange={handleChange}
-                checked={sidebarData.type === "subscription"}
-              />
-              <span>Subscription</span>
-            </div>
-            <div className="flex gap-2">
-              <input
-                type="checkbox"
-                id="oneTimePurchase"
-                className="w-5"
-                onChange={handleChange}
-                checked={sidebarData.type === "oneTimePurchase"}
-              />
-              <span>One-time purchase</span>
-            </div>
-            <div className="flex gap-2">
-              <input
-                type="checkbox"
-                id="offer"
-                className="w-5"
-                onChange={handleChange}
-                checked={sidebarData.offer}
-              />
-              <span>Offer</span>
-            </div>
-          </div>
-          <div className="flex gap-2 flex-wrap items-center">
-            <label className="font-semibold">Details:</label>
-            <div className="flex gap-2">
-              <input
-                type="checkbox"
-                id="certificate"
-                className="w-5"
-                onChange={handleChange}
-                checked={sidebarData.certificate}
-              />
-              <span>Certificate</span>
-            </div>
-            <div className="flex gap-2">
-              <input
-                type="checkbox"
-                id="community"
-                className="w-5"
-                onChange={handleChange}
-                checked={sidebarData.community}
-              />
-              <span>Community</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <label className="font-semibold">Sort by:</label>
-            <select
-              onChange={handleChange}
-              defaultValue={"created_at_desc"}
-              id="sort_order"
-              className="border rounded-lg p-3"
+    <>
+      <Header />
+      <section className="signIn-section">
+        <div className="flex flex-col md:flex-row">
+          <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen md:max-w-md">
+            <form
+              onSubmit={handleSubmit}
+              className="signIn-form flex flex-col gap-8"
             >
-              <option value="regularPrice_desc">Price - decreasing</option>
-              <option value="regularPrice_asc">Price - increasing</option>
-              <option value="createdAt_desc">Latest</option>
-              <option value="createdAt_asc">Oldest</option>
-            </select>
+              <div className="flex items-center gap-2">
+                <label className="whitespace-nowrap font-semibold">
+                  Search term:
+                </label>
+                <input
+                  type="text"
+                  id="searchTerm"
+                  placeholder="Search..."
+                  className="border p-3 w-full"
+                  value={sidebarData.searchTerm}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="flex gap-2 flex-wrap items-center">
+                <label className="font-semibold">Type:</label>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="all"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={sidebarData.type === "all"}
+                  />
+                  <span>One-time purchase & subscription</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="subscription"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={sidebarData.type === "subscription"}
+                  />
+                  <span>Subscription</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="oneTimePurchase"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={sidebarData.type === "oneTimePurchase"}
+                  />
+                  <span>One-time purchase</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="offer"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={sidebarData.offer}
+                  />
+                  <span>Offer</span>
+                </div>
+              </div>
+              <div className="flex gap-2 flex-wrap items-center">
+                <label className="font-semibold">Details:</label>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="certificate"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={sidebarData.certificate}
+                  />
+                  <span>Certificate</span>
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="checkbox"
+                    id="community"
+                    className="w-5"
+                    onChange={handleChange}
+                    checked={sidebarData.community}
+                  />
+                  <span>Community</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <label className="font-semibold">Sort by:</label>
+                <select
+                  onChange={handleChange}
+                  defaultValue={"created_at_desc"}
+                  id="sort_order"
+                  className="border p-3"
+                >
+                  <option value="regularPrice_desc">Price - decreasing</option>
+                  <option value="regularPrice_asc">Price - increasing</option>
+                  <option value="createdAt_desc">Latest</option>
+                  <option value="createdAt_asc">Oldest</option>
+                </select>
+              </div>
+              <button className="p-3 uppercase hover:opacity-95">Search</button>
+            </form>
           </div>
-          <button className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95">
-            Search
-          </button>
-        </form>
-      </div>
-      <div className="flex-1">
-        <h1 className="text-3xl font-semibold border-b p-3 text-slate-700 mt-5">
-          Listing results:
-        </h1>
-        <div className="p-7 flex flex-wrap gap-4">
-          {!loading && listings.length === 0 && (
-            <p className="text-xl text-slate-700">No listing found.</p>
-          )}
-          {loading && (
-            <p className="text-xl text-slate-700 text-center w-full">
-              Loading...
-            </p>
-          )}
-          {!loading &&
-            listings &&
-            listings.map((listing) => (
-              <ListingItem key={listing._id} listing={listing} />
-            ))}
-          {showMore && (
-            <button
-              onClick={onShowMoreClick}
-              className="text-green-700 hover:underline p-7 text-center w-full"
-            >
-              Show more
-            </button>
-          )}
+          <div className="flex-1">
+            <h1 className="text-3xl font-semibold border-b p-3 mt-5">
+              Listing results:
+            </h1>
+            <div className="p-7 flex flex-wrap gap-4">
+              {!loading && listings.length === 0 && (
+                <p className="text-xl">No listing found.</p>
+              )}
+              {loading && (
+                <p className="text-xltext-center w-full">Loading...</p>
+              )}
+              {!loading &&
+                listings &&
+                listings.map((listing) => (
+                  <ListingItem key={listing._id} listing={listing} />
+                ))}
+              {showMore && (
+                <button
+                  onClick={onShowMoreClick}
+                  className="hover:underline p-7 text-center w-full"
+                >
+                  Show more
+                </button>
+              )}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
