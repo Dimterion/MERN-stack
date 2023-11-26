@@ -364,3 +364,13 @@ body {
   text-align: center;
   padding: 5px 10px 4px;
 }
+
+.search-select {
+  background: var(--additional);
+  border: 2px solid var(--tertiary);
+}
+
+.search-checkbox {
+  accent-color: var(--secondary);
+  cursor: pointer;
+}

@@ -169,7 +169,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="all"
-                    className="w-5"
+                    className="search-checkbox w-5"
                     onChange={handleChange}
                     checked={sidebarData.type === "all"}
                   />
@@ -179,7 +179,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="subscription"
-                    className="w-5"
+                    className="search-checkbox w-5"
                     onChange={handleChange}
                     checked={sidebarData.type === "subscription"}
                   />
@@ -189,7 +189,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="oneTimePurchase"
-                    className="w-5"
+                    className="search-checkbox w-5"
                     onChange={handleChange}
                     checked={sidebarData.type === "oneTimePurchase"}
                   />
@@ -199,7 +199,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="offer"
-                    className="w-5"
+                    className="search-checkbox w-5"
                     onChange={handleChange}
                     checked={sidebarData.offer}
                   />
@@ -212,7 +212,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="certificate"
-                    className="w-5"
+                    className="search-checkbox w-5"
                     onChange={handleChange}
                     checked={sidebarData.certificate}
                   />
@@ -222,7 +222,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="community"
-                    className="w-5"
+                    className="search-checkbox w-5"
                     onChange={handleChange}
                     checked={sidebarData.community}
                   />
@@ -235,7 +235,7 @@ export default function Search() {
                   onChange={handleChange}
                   defaultValue={"created_at_desc"}
                   id="sort_order"
-                  className="border p-3"
+                  className="search-select border p-3"
                 >
                   <option value="regularPrice_desc">Price - decreasing</option>
                   <option value="regularPrice_asc">Price - increasing</option>
