@@ -63,13 +63,13 @@ export default function Header({ header }) {
               alt="Profile image."
             />
           ) : (
-            <li className="header-li mx-1">
+            <li className="header-li relative flex flex-row flex-wrap justify-center items-center mx-1">
               <FaCodeBranch />
             </li>
           )}
         </Link>
         <Link to="/about">
-          <li className="header-li mx-1">
+          <li className="header-li relative flex flex-row flex-wrap justify-center items-center mx-1">
             <FaRegIdCard />
           </li>
         </Link>

@@ -43,14 +43,6 @@ body {
   border: 3px solid var(--tertiary);
 }
 
-.header-li {
-  position: relative;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 .header-li::before {
   content: "";
   position: absolute;
@@ -84,7 +76,6 @@ body {
 /* Home Page */
 
 .home-aside {
-  position: relative;
   border: 2px solid var(--secondary);
 }
 
