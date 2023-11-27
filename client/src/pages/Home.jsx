@@ -115,7 +115,7 @@ export default function Home() {
         <div className="home-verticalLine"></div>
         <div className="home-horizontalLine"></div>
         <div className="home-asideInner flex flex-col gap-4 p-20 px-3 md:w-1/4 w-3/5 max-w-6xl mx-auto my-40">
-          <h1 className="font-bold text-3xl lg:text-6xl">
+          <h1 className="font-bold text-3xl">
             Find your Prime <span style={{ color: "#2d6a4f" }}>coding</span>
             <br />
             Directives
