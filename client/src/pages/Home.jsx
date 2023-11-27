@@ -110,7 +110,6 @@ export default function Home() {
   ) : (
     <div>
       <Header header={"header-header"} />
-      {/* Top */}
       <aside className="home-aside relative">
         <div className="home-verticalLine"></div>
         <div className="home-horizontalLine"></div>
@@ -130,7 +129,6 @@ export default function Home() {
           </Link>
         </div>
       </aside>
-      {/* Swiper */}
       <Swiper navigation>
         {offerListings &&
           offerListings.length > 0 &&
@@ -148,7 +146,6 @@ export default function Home() {
             </SwiperSlide>
           ))}
       </Swiper>
-      {/* Listings results */}
       <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-10">
         {offerListings && offerListings.length > 0 && (
           <>
