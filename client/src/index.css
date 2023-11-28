@@ -367,3 +367,8 @@ body {
   accent-color: var(--secondary);
   cursor: pointer;
 }
+
+.search-sectionInnerDiv,
+.search-hOne {
+  border-color: var(--secondary);
+}

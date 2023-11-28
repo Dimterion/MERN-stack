@@ -145,7 +145,7 @@ export default function Search() {
       <Header />
       <section className="signIn-section">
         <div className="flex flex-col md:flex-row">
-          <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen md:max-w-md">
+          <div className="search-sectionInnerDiv p-7 border-b-2 md:border-r-2 md:min-h-screen md:max-w-md">
             <form
               onSubmit={handleSubmit}
               className="signIn-form flex flex-col gap-8"
@@ -158,12 +158,12 @@ export default function Search() {
                   type="text"
                   id="searchTerm"
                   placeholder="Search..."
-                  className="border p-3 w-full"
+                  className="border p-2 w-full"
                   value={sidebarData.searchTerm}
                   onChange={handleChange}
                 />
               </div>
-              <div className="flex gap-2 flex-wrap items-center">
+              <div className="flex flex-col gap-2">
                 <label className="font-semibold">Type:</label>
                 <div className="flex gap-2">
                   <input
@@ -173,7 +173,7 @@ export default function Search() {
                     onChange={handleChange}
                     checked={sidebarData.type === "all"}
                   />
-                  <span>One-time purchase & subscription</span>
+                  <span>All payment options</span>
                 </div>
                 <div className="flex gap-2">
                   <input
@@ -206,7 +206,7 @@ export default function Search() {
                   <span>Offer</span>
                 </div>
               </div>
-              <div className="flex gap-2 flex-wrap items-center">
+              <div className="flex flex-col gap-2">
                 <label className="font-semibold">Details:</label>
                 <div className="flex gap-2">
                   <input
@@ -235,7 +235,7 @@ export default function Search() {
                   onChange={handleChange}
                   defaultValue={"created_at_desc"}
                   id="sort_order"
-                  className="search-select border p-3"
+                  className="search-select border p-1"
                 >
                   <option value="regularPrice_desc">Price - decreasing</option>
                   <option value="regularPrice_asc">Price - increasing</option>
@@ -247,7 +247,7 @@ export default function Search() {
             </form>
           </div>
           <div className="flex-1">
-            <h1 className="text-3xl font-semibold border-b p-3 mt-5">
+            <h1 className="search-hOne text-3xl font-semibold border-b-2 p-3 mt-5">
               Listing results:
             </h1>
             <div className="p-7 flex flex-wrap gap-4">
