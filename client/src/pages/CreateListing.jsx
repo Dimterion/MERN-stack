@@ -216,7 +216,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="oneTimePurchase"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.type === "oneTimePurchase"}
                   />
@@ -226,7 +226,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="subscription"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.type === "subscription"}
                   />
@@ -236,7 +236,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="certificate"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.certificate}
                   />
@@ -246,7 +246,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="community"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.community}
                   />
@@ -256,7 +256,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="offer"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.offer}
                   />
@@ -271,7 +271,7 @@ export default function CreateListing() {
                     min="1"
                     max="10000"
                     required
-                    className="p-3 border border-gray-300"
+                    className="p-3 border"
                     onChange={handleChange}
                     value={formData.hours}
                   />
@@ -284,7 +284,7 @@ export default function CreateListing() {
                     min="1"
                     max="10000"
                     required
-                    className="p-3 border border-gray-300"
+                    className="p-3 border"
                     onChange={handleChange}
                     value={formData.parts}
                   />
@@ -297,7 +297,7 @@ export default function CreateListing() {
                     min="0"
                     max="10000"
                     required
-                    className="p-3 border border-gray-300"
+                    className="p-3 border"
                     onChange={handleChange}
                     value={formData.regularPrice}
                   />
@@ -318,7 +318,7 @@ export default function CreateListing() {
                       min="0"
                       max="10000"
                       required
-                      className="p-3 border border-gray-300"
+                      className="p-3 border"
                       onChange={handleChange}
                       value={formData.discountPrice}
                     />
@@ -336,15 +336,15 @@ export default function CreateListing() {
             </div>
             <div className="flex flex-col flex-1 gap-4">
               <p className="font-semibold">
-                Images:
-                <span className="font-normal text-gray-600 ml-2">
-                  The first image will be the cover (max 6).
+                Images
+                <span className="font-normal text-sm ml-2">
+                  (the first image will be the cover; max 6).
                 </span>
               </p>
               <div className="flex gap-4">
                 <input
                   onChange={(e) => setFiles(e.target.files)}
-                  className="p-3 border border-gray-300 w-full"
+                  className="createListing-chooseFilesContainer p-3 border w-full"
                   type="file"
                   id="images"
                   accept="image/*"
@@ -354,19 +354,17 @@ export default function CreateListing() {
                   type="button"
                   disabled={uploading}
                   onClick={handleImageSubmit}
-                  className="p-3 text-green-700 border border-green-700 uppercase hover:shadow-lg disabled:opacity-80"
+                  className="p-3 border uppercase hover:shadow-lg disabled:opacity-80"
                 >
                   {uploading ? "Uploading..." : "Upload"}
                 </button>
               </div>
-              <p className="text-red-700 text-sm">
-                {imageUploadError && imageUploadError}
-              </p>
+              <p className="text-sm">{imageUploadError && imageUploadError}</p>
               {formData.imageUrls.length > 0 &&
                 formData.imageUrls.map((url, index) => (
                   <div
                     key={url}
-                    className="flex justify-between p-3 border items-center"
+                    className="createListing-imagesContainer flex justify-between p-3 border-2 items-center"
                   >
                     <img
                       src={url}
@@ -376,7 +374,7 @@ export default function CreateListing() {
                     <button
                       type="button"
                       onClick={() => handleRemoveImage(index)}
-                      className="p-3 text-red-700 uppercase hover:opacity-75"
+                      className="p-3 uppercase hover:opacity-75"
                     >
                       Delete
                     </button>
@@ -384,11 +382,11 @@ export default function CreateListing() {
                 ))}
               <button
                 disabled={loading || uploading}
-                className="p-3 bg-slate-700 text-white uppercase hover:opacity-95 disabled:opacity-80"
+                className="p-3 uppercase hover:opacity-95 disabled:opacity-80"
               >
                 {loading ? "Creating listing..." : "Create listing"}
               </button>
-              {error && <p className="text-red-700 text-sm">{error}</p>}
+              {error && <p className="text-sm">{error}</p>}
             </div>
           </form>
         </section>

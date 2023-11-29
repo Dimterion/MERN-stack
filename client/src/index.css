@@ -372,3 +372,20 @@ body {
 .search-hOne {
   border-color: var(--secondary);
 }
+
+/* Create Listing Page */
+.createListing-checkbox {
+  accent-color: var(--secondary);
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+
+.createListing-imagesContainer {
+  border-color: var(--secondary);
+}
