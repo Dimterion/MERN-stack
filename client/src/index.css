@@ -21,7 +21,7 @@ body {
 
 /* Header Component */
 .header-header {
-  animation: 0.5s header-load 1.5s linear both;
+  animation: 0.5s header-load 1s linear both;
 }
 
 @keyframes header-load {
@@ -37,6 +37,10 @@ body {
 .header-form {
   background-color: var(--additional);
   border: 3px solid var(--tertiary);
+}
+
+.header-userImg {
+  background: var(--tertiary);
 }
 
 .header-userImg::before {
@@ -103,7 +107,7 @@ body {
   background: var(--secondary);
   left: 50%;
   opacity: 0.1;
-  animation: 0.5s home-line 1.3s linear;
+  animation: 0.2s home-line 0.8s linear;
 }
 
 .home-horizontalLine {
@@ -113,7 +117,7 @@ body {
   background: var(--secondary);
   top: 50%;
   opacity: 0.1;
-  animation: 0.5s home-line 1.3s linear;
+  animation: 0.2s home-line 0.8s linear;
 }
 
 @keyframes home-line {
@@ -128,12 +132,12 @@ body {
 
 .home-asideInner {
   border: 3px solid rgba(116, 198, 157, 0.3);
-  animation: home-asideInner 1.5s linear;
+  animation: home-asideInner 1s linear;
 }
 
 @keyframes home-asideInner {
   0% {
-    padding: 10rem 1rem;
+    padding: 8rem 0.75rem;
     border: 3px solid rgba(116, 198, 157, 0.3);
   }
 
@@ -429,6 +433,7 @@ input[type="file"]::file-selector-button {
 /* Profile Page*/
 .profile-img {
   border: 2px solid var(--secondary);
+  background: var(--tertiary);
 }
 
 .profile-listingContainer {
