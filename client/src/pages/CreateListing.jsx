@@ -369,7 +369,7 @@ export default function CreateListing() {
                     <img
                       src={url}
                       alt="Listing image."
-                      className="w-30 h-20 object-contain"
+                      className="w-20 h-20 object-cover"
                     />
                     <button
                       type="button"

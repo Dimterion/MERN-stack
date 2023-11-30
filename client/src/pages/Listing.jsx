@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Navigation } from "swiper/modules";
 import "swiper/css/bundle";
+import Header from "../components/Header";
 import Contact from "../components/Contact";
 
 export default function Listing() {
@@ -55,106 +56,111 @@ export default function Listing() {
   }, [params.listingId]);
 
   return (
-    <main>
-      {loading && <p className="text-center my-7 text-2xl">Loading...</p>}
-      {error && (
-        <p className="text-center my-7 text-2xl">Something went wrong.</p>
-      )}
-      {listing && !loading && !error && (
-        <div>
-          <Swiper navigation>
-            {listing.imageUrls.map((url) => (
-              <SwiperSlide key={url}>
-                <div
-                  className="h-[550px]"
-                  style={{
-                    background: `url(${url}) center no-repeat`,
-                    backgroundSize: "cover",
-                  }}
-                ></div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="listing-shareBtn fixed top-[12%] right-[2%] z-10 border w-10 h-10 flex justify-center items-center cursor-pointer">
-            <FaLink
-              onClick={() => {
-                navigator.clipboard.writeText(window.location.href);
-                setCopied(true);
-                setTimeout(() => {
-                  setCopied(false);
-                }, 2000);
-              }}
-            />
-          </div>
-          {copied && (
-            <p className="listing-shareBtn text-sm fixed top-[20%] right-[2%] z-10 p-1">
-              Link is copied.
-            </p>
-          )}
-          <div className="flex flex-col max-w-4xl mx-auto p-3 my-7 gap-4">
-            <p className="text-2xl font-semibold">
-              {listing.name} -{" "}
-              {listing.offer
-                ? listing.discountPrice.toLocaleString("en-US")
-                : listing.regularPrice.toLocaleString("en-US")}
-              ${listing.type === "subscription" && " / month"}
-            </p>
-            <p className="flex items-center mt-6 gap-2 text-slate-600 text-sm">
-              <FaLink className="text-green-700" />
-              {listing.link}
-            </p>
-            <div className="flex gap-4">
-              <p className="bg-red-900 w-full max-w-[200px] text-white text-center p-1 rounded-md">
-                {listing.type === "subscription"
-                  ? "Subscription"
-                  : "One-time purchase"}
-              </p>
-              {listing.offer && (
-                <p className="bg-green-900 w-full max-w-[200px] text-white text-center p-1 rounded-md">
-                  {+listing.regularPrice - +listing.discountPrice}$ discount
-                </p>
-              )}
+    <>
+      <Header />
+      <main className="signIn-section pt-2">
+        {loading && <p className="text-center my-7 text-2xl">Loading...</p>}
+        {error && (
+          <p className="text-center my-7 text-2xl">Something went wrong.</p>
+        )}
+        {listing && !loading && !error && (
+          <div className="relative">
+            <Swiper navigation>
+              {listing.imageUrls.map((url) => (
+                <SwiperSlide key={url}>
+                  <div
+                    className="h-[550px] w-[550px] m-auto max-w-[100%] max-h-[40vh]"
+                    style={{
+                      background: `url(${url}) center no-repeat`,
+                      backgroundSize: "cover",
+                    }}
+                  ></div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className="listing-shareBtn absolute top-[1%] right-[1%] z-10 border w-6 h-6 flex justify-center items-center cursor-pointer">
+              <FaLink
+                onClick={() => {
+                  navigator.clipboard.writeText(window.location.href);
+                  setCopied(true);
+                  setTimeout(() => {
+                    setCopied(false);
+                  }, 2000);
+                }}
+              />
             </div>
-            <p className="text-slate-800">
-              <span className="font-semibold text-black">Description: </span>
-              {listing.description}
-            </p>
-            <ul className="text-green-900 font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6">
-              <li className="flex items-center gap-1 whitespace-nowrap">
-                <FaRegClock className="text-lg" />
-                {listing.hours > 1
-                  ? `${listing.hours} hours`
-                  : `${listing.hours} hour`}
-              </li>
-              <li className="flex items-center gap-1 whitespace-nowrap">
-                <FaListUl className="text-lg" />
-                {listing.parts > 1
-                  ? `${listing.parts} parts`
-                  : `${listing.parts} part`}
-              </li>
-              <li className="flex items-center gap-1 whitespace-nowrap">
-                <FaGraduationCap className="text-lg" />
-                {listing.certificate
-                  ? "Certificate of completion"
-                  : "No certificate of completion"}
-              </li>
-              <li className="flex items-center gap-1 whitespace-nowrap">
-                <FaUserFriends className="text-lg" />
-                {listing.community ? "Community" : "No community"}
-              </li>
-            </ul>
-            {currentUser && listing.userRef !== currentUser._id && !contact && (
-              <button
-                onClick={() => setContact(true)}
-                className="bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 p-3"
-              >
-                Contact poster
-              </button>
+            {copied && (
+              <p className="listing-shareBtn text-sm absolute top-[5%] right-[1%] z-10 p-1">
+                Link copied
+              </p>
             )}
-            {contact && <Contact listing={listing} />}
+            <div className="flex flex-col max-w-4xl mx-auto p-3 my-7 gap-4">
+              <p className="text-2xl font-semibold">
+                {listing.name} -{" "}
+                {listing.offer
+                  ? listing.discountPrice.toLocaleString("en-US")
+                  : listing.regularPrice.toLocaleString("en-US")}
+                ${listing.type === "subscription" && " / month"}
+              </p>
+              <p className="flex items-center mt-6 gap-2 text-sm">
+                <FaLink />
+                {listing.link}
+              </p>
+              <div className="flex gap-4">
+                <p className="listing-type w-full max-w-[200px] text-center p-1">
+                  {listing.type === "subscription"
+                    ? "Subscription"
+                    : "One-time purchase"}
+                </p>
+                {listing.offer && (
+                  <p className="listing-type w-full max-w-[200px] text-center p-1">
+                    {+listing.regularPrice - +listing.discountPrice}$ discount
+                  </p>
+                )}
+              </div>
+              <p>
+                <span className="font-semibold">Description: </span>
+                {listing.description}
+              </p>
+              <ul className="font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6">
+                <li className="flex items-center gap-1 whitespace-nowrap">
+                  <FaRegClock className="text-lg" />
+                  {listing.hours > 1
+                    ? `${listing.hours} hours`
+                    : `${listing.hours} hour`}
+                </li>
+                <li className="flex items-center gap-1 whitespace-nowrap">
+                  <FaListUl className="text-lg" />
+                  {listing.parts > 1
+                    ? `${listing.parts} parts`
+                    : `${listing.parts} part`}
+                </li>
+                <li className="flex items-center gap-1 whitespace-nowrap">
+                  <FaGraduationCap className="text-lg" />
+                  {listing.certificate
+                    ? "Certificate of completion"
+                    : "No certificate of completion"}
+                </li>
+                <li className="flex items-center gap-1 whitespace-nowrap">
+                  <FaUserFriends className="text-lg" />
+                  {listing.community ? "Community" : "No community"}
+                </li>
+              </ul>
+              {currentUser &&
+                listing.userRef !== currentUser._id &&
+                !contact && (
+                  <button
+                    onClick={() => setContact(true)}
+                    className="listing-contactBtn uppercase hover:opacity-80 p-3 m-4"
+                  >
+                    Contact poster
+                  </button>
+                )}
+              {contact && <Contact listing={listing} />}
+            </div>
           </div>
-        </div>
-      )}
-    </main>
+        )}
+      </main>
+    </>
   );
 }

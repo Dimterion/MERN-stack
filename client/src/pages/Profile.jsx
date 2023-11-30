@@ -199,13 +199,11 @@ export default function Profile() {
               onClick={() => fileRef.current.click()}
               src={formData.avatar || currentUser.avatar}
               alt="Profile image."
-              className="h-24 w-24 object-cover cursor-pointer self-center mt-2"
+              className="profile-img h-24 w-24 object-cover cursor-pointer self-center mt-2"
             />
             <p className="text-sm self-center">
               {fileUploadError ? (
-                <span className="text-red-700">
-                  Image upload error (must be less than 2mb).
-                </span>
+                <span>Image upload error (must be less than 2mb).</span>
               ) : filePerc > 0 && filePerc < 100 ? (
                 <span>{`Uploading ${filePerc}%.`}</span>
               ) : filePerc === 100 ? (
@@ -285,17 +283,17 @@ export default function Profile() {
               {userListings.map((listing) => (
                 <div
                   key={listing._id}
-                  className="border rounded-lg p-3 flex justify-between items-center gap-4"
+                  className="profile-listingContainer border-2 p-3 flex justify-between items-center gap-4"
                 >
                   <Link to={`/listing/${listing._id}`}>
                     <img
                       src={listing.imageUrls[0]}
                       alt="Listing cover."
-                      className="h-16 w-16 object-contain"
+                      className="h-16 w-16 object-cover"
                     />
                   </Link>
                   <Link
-                    className="text-slate-700 font-semibold hover:underline truncate flex-1"
+                    className="font-semibold hover:underline truncate flex-1"
                     to={`/listing/${listing._id}`}
                   >
                     <p>{listing.name}</p>
@@ -303,12 +301,14 @@ export default function Profile() {
                   <div className="flex flex-col items-center">
                     <button
                       onClick={() => handleListingDelete(listing._id)}
-                      className="text-red-700 uppercase"
+                      className="uppercase hover:opacity-80"
                     >
                       Delete
                     </button>
                     <Link to={`/update-listing/${listing._id}`}>
-                      <button className="text-green-700 uppercase">Edit</button>
+                      <button className="uppercase  hover:opacity-80">
+                        Edit
+                      </button>
                     </Link>
                   </div>
                 </div>

@@ -57,19 +57,21 @@ export default function Header({ header }) {
       <ul className="flex gap-3 mx-1 text-center items-center flex-wrap justify-around">
         <Link to="/profile">
           {currentUser ? (
-            <img
-              className="h-6 w-6 object-cover"
-              src={currentUser.avatar}
-              alt="Profile image."
-            />
+            <div className="header-userImg relative flex flex-row flex-wrap justify-center items-center mx-1 hover:opacity-80">
+              <img
+                className="h-4 w-4 object-cover"
+                src={currentUser.avatar}
+                alt="Profile image."
+              />
+            </div>
           ) : (
-            <li className="header-li relative flex flex-row flex-wrap justify-center items-center mx-1">
+            <li className="header-li relative flex flex-row flex-wrap justify-center items-center mx-1 hover:opacity-80">
               <FaCodeBranch />
             </li>
           )}
         </Link>
         <Link to="/about">
-          <li className="header-li relative flex flex-row flex-wrap justify-center items-center mx-1">
+          <li className="header-li relative flex flex-row flex-wrap justify-center items-center mx-1 hover:opacity-80">
             <FaRegIdCard />
           </li>
         </Link>
