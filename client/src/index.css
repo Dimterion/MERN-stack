@@ -389,3 +389,9 @@ input[type="file"]::file-selector-button {
 .createListing-imagesContainer {
   border-color: var(--secondary);
 }
+
+/* Listing Page */
+.listing-shareBtn {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--secondary);
+}

@@ -6,7 +6,6 @@ import {
   FaLink,
   FaListUl,
   FaRegClock,
-  FaShare,
   FaUserFriends,
 } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -76,9 +75,8 @@ export default function Listing() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="fixed top-[12%] right-[2%] z-10 border rounded-full w-12 h-12 flex justify-center items-center bg-slate-100 cursor-pointer">
-            <FaShare
-              className="text-slate-500"
+          <div className="listing-shareBtn fixed top-[12%] right-[2%] z-10 border w-10 h-10 flex justify-center items-center cursor-pointer">
+            <FaLink
               onClick={() => {
                 navigator.clipboard.writeText(window.location.href);
                 setCopied(true);
@@ -89,7 +87,7 @@ export default function Listing() {
             />
           </div>
           {copied && (
-            <p className="fixed top-[20%] right-[2%] z-10 rounded-md bg-slate-100 p-2">
+            <p className="listing-shareBtn text-sm fixed top-[20%] right-[2%] z-10 p-1">
               Link is copied.
             </p>
           )}
