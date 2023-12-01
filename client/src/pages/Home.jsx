@@ -110,7 +110,7 @@ export default function Home() {
   ) : (
     <div>
       <Header header={"header-header"} />
-      <aside className="home-aside relative mb-2">
+      <aside className="home-aside relative mb-12">
         <div className="home-verticalLine"></div>
         <div className="home-horizontalLine"></div>
         <div className="home-asideInner flex flex-col gap-4 p-20 px-3 w-[260px] max-w-[95vw] mx-auto my-40">
@@ -140,7 +140,7 @@ export default function Home() {
                     background: `url(${listing.imageUrls[0]}) center no-repeat`,
                     backgroundSize: "cover",
                   }}
-                  className="h-[500px] w-[500px] m-auto"
+                  className="h-[350px] w-[1000px] m-auto max-w-[90vw] max-h-[50vh]"
                 ></div>
               </Link>
             </SwiperSlide>

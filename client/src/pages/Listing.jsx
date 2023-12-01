@@ -58,7 +58,7 @@ export default function Listing() {
   return (
     <>
       <Header />
-      <main className="signIn-section pt-2">
+      <main className="signIn-section pt-12">
         {loading && <p className="text-center my-7 text-2xl">Loading...</p>}
         {error && (
           <p className="text-center my-7 text-2xl">Something went wrong.</p>
@@ -69,7 +69,7 @@ export default function Listing() {
               {listing.imageUrls.map((url) => (
                 <SwiperSlide key={url}>
                   <div
-                    className="h-[550px] w-[550px] m-auto max-w-[100%] max-h-[40vh]"
+                    className="h-[350px] w-[1000px] m-auto max-w-[90vw] max-h-[50vh]"
                     style={{
                       background: `url(${url}) center no-repeat`,
                       backgroundSize: "cover",
@@ -78,7 +78,7 @@ export default function Listing() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="listing-shareBtn absolute top-[1%] right-[1%] z-10 border w-6 h-6 flex justify-center items-center cursor-pointer">
+            <div className="listing-shareBtn absolute top-[0%] right-[1%] z-10 border w-6 h-6 flex justify-center items-center cursor-pointer">
               <FaLink
                 onClick={() => {
                   navigator.clipboard.writeText(window.location.href);
