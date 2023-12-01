@@ -416,6 +416,11 @@ input[type="file"]::file-selector-button {
   border-color: var(--secondary);
 }
 
+/* Update Listing Page */
+.updateListing-imgContainer {
+  border-color: var(--secondary);
+}
+
 /* Listing Page */
 .listing-shareBtn {
   background: var(--additional);
