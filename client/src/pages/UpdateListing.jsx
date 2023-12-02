@@ -188,9 +188,7 @@ export default function UpdateListing() {
 
   return (
     <>
-      <header>
-        <Header />
-      </header>
+      <Header />
       <main className="signIn-section">
         <section className="p-3 max-w-4xl mx-auto">
           <h1 className="text-3xl font-semibold text-center my-7">
@@ -235,7 +233,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="oneTimePurchase"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.type === "oneTimePurchase"}
                   />
@@ -245,7 +243,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="subscription"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.type === "subscription"}
                   />
@@ -255,7 +253,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="certificate"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.certificate}
                   />
@@ -265,7 +263,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="community"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.community}
                   />
@@ -275,7 +273,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="offer"
-                    className="w-5"
+                    className="createListing-checkbox w-5"
                     onChange={handleChange}
                     checked={formData.offer}
                   />
@@ -290,7 +288,7 @@ export default function UpdateListing() {
                     min="1"
                     max="10000"
                     required
-                    className="p-3 border"
+                    className="p-3"
                     onChange={handleChange}
                     value={formData.hours}
                   />
@@ -303,7 +301,7 @@ export default function UpdateListing() {
                     min="1"
                     max="10000"
                     required
-                    className="p-3 border"
+                    className="p-3"
                     onChange={handleChange}
                     value={formData.parts}
                   />
@@ -316,7 +314,7 @@ export default function UpdateListing() {
                     min="0"
                     max="10000"
                     required
-                    className="p-3 border"
+                    className="p-3"
                     onChange={handleChange}
                     value={formData.regularPrice}
                   />
@@ -337,7 +335,7 @@ export default function UpdateListing() {
                       min="0"
                       max="10000"
                       required
-                      className="p-3 border"
+                      className="p-3"
                       onChange={handleChange}
                       value={formData.discountPrice}
                     />
@@ -357,13 +355,13 @@ export default function UpdateListing() {
               <p className="font-semibold">
                 Images:
                 <span className="font-normal ml-2">
-                  The first image will be the cover (max 6).
+                  (the first image will be the cover; max 6).
                 </span>
               </p>
               <div className="flex gap-4">
                 <input
                   onChange={(e) => setFiles(e.target.files)}
-                  className="p-3 border w-full"
+                  className="p-3 w-full"
                   type="file"
                   id="images"
                   accept="image/*"
@@ -373,7 +371,7 @@ export default function UpdateListing() {
                   type="button"
                   disabled={uploading}
                   onClick={handleImageSubmit}
-                  className="p-3 border uppercase hover:shadow-lg disabled:opacity-80"
+                  className="p-3 uppercase hover:opacity-80 disabled:opacity-80"
                 >
                   {uploading ? "Uploading..." : "Upload"}
                 </button>
@@ -393,7 +391,7 @@ export default function UpdateListing() {
                     <button
                       type="button"
                       onClick={() => handleRemoveImage(index)}
-                      className="p-3 uppercase hover:opacity-75"
+                      className="p-3 uppercase hover:opacity-80"
                     >
                       Delete
                     </button>

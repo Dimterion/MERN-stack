@@ -169,9 +169,7 @@ export default function CreateListing() {
 
   return (
     <>
-      <header>
-        <Header />
-      </header>
+      <Header />
       <main className="signIn-section">
         <section className="p-3 max-w-4xl mx-auto">
           <h1 className="text-3xl font-semibold text-center my-7">
@@ -271,7 +269,7 @@ export default function CreateListing() {
                     min="1"
                     max="10000"
                     required
-                    className="p-3 border"
+                    className="p-3"
                     onChange={handleChange}
                     value={formData.hours}
                   />
@@ -284,7 +282,7 @@ export default function CreateListing() {
                     min="1"
                     max="10000"
                     required
-                    className="p-3 border"
+                    className="p-3"
                     onChange={handleChange}
                     value={formData.parts}
                   />
@@ -297,7 +295,7 @@ export default function CreateListing() {
                     min="0"
                     max="10000"
                     required
-                    className="p-3 border"
+                    className="p-3"
                     onChange={handleChange}
                     value={formData.regularPrice}
                   />
@@ -318,7 +316,7 @@ export default function CreateListing() {
                       min="0"
                       max="10000"
                       required
-                      className="p-3 border"
+                      className="p-3"
                       onChange={handleChange}
                       value={formData.discountPrice}
                     />
@@ -344,7 +342,7 @@ export default function CreateListing() {
               <div className="flex gap-4">
                 <input
                   onChange={(e) => setFiles(e.target.files)}
-                  className="createListing-chooseFilesContainer p-3 border w-full"
+                  className="createListing-chooseFilesContainer p-3 w-full"
                   type="file"
                   id="images"
                   accept="image/*"
@@ -354,7 +352,7 @@ export default function CreateListing() {
                   type="button"
                   disabled={uploading}
                   onClick={handleImageSubmit}
-                  className="p-3 border uppercase hover:shadow-lg disabled:opacity-80"
+                  className="p-3 uppercase hover:opacity-80 disabled:opacity-80"
                 >
                   {uploading ? "Uploading..." : "Upload"}
                 </button>
@@ -374,7 +372,7 @@ export default function CreateListing() {
                     <button
                       type="button"
                       onClick={() => handleRemoveImage(index)}
-                      className="p-3 uppercase hover:opacity-75"
+                      className="p-3 uppercase hover:opacity-80"
                     >
                       Delete
                     </button>
