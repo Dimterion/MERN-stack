@@ -80,7 +80,7 @@ export default function SignIn() {
             />
             <button
               disabled={loading}
-              className="p-3 uppercase hover:opacity-70 disabled:opacity-80"
+              className="p-3 uppercase hover:opacity-80 disabled:opacity-80"
             >
               {loading ? "Loading..." : "Sign In"}
             </button>

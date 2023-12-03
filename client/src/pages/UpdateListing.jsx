@@ -79,7 +79,7 @@ export default function UpdateListing() {
           setUploading(false);
         });
     } else {
-      setImageUploadError("You can only upload 6 images per listing.");
+      setImageUploadError("Min 1, max 6 images per listing.");
       setUploading(false);
     }
   };
@@ -213,7 +213,7 @@ export default function UpdateListing() {
               <textarea
                 type="text"
                 placeholder="Description"
-                className="border p-3"
+                className="border p-3 h-28"
                 id="description"
                 required
                 onChange={handleChange}
@@ -399,7 +399,7 @@ export default function UpdateListing() {
                 ))}
               <button
                 disabled={loading || uploading}
-                className="p-3 uppercase hover:opacity-95 disabled:opacity-80"
+                className="p-3 uppercase hover:opacity-80 disabled:opacity-80"
               >
                 {loading ? "Updating listing..." : "Update listing"}
               </button>

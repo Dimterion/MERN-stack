@@ -237,12 +237,12 @@ export default function Profile() {
             />
             <button
               disabled={loading}
-              className="p-3 uppercase hover:opacity-70 disabled:opacity-80"
+              className="p-3 uppercase hover:opacity-80 disabled:opacity-80"
             >
               {loading ? "Updating..." : "Update data"}
             </button>
             <Link
-              className="profile-link p-3 uppercase text-center hover:opacity-70"
+              className="profile-link p-3 uppercase text-center hover:opacity-80"
               to="/create-listing"
             >
               Create listing
