@@ -151,8 +151,8 @@ export default function Search() {
               className="signIn-form flex flex-col gap-8"
             >
               <div className="flex items-center gap-2">
-                <label className="whitespace-nowrap font-semibold">
-                  Search term:
+                <label className="whitespace-nowrap font-semibold uppercase">
+                  Search:
                 </label>
                 <input
                   type="text"
@@ -235,7 +235,7 @@ export default function Search() {
                   onChange={handleChange}
                   defaultValue={"created_at_desc"}
                   id="sort_order"
-                  className="search-select border p-1"
+                  className="search-select border p-1 cursor-pointer"
                 >
                   <option value="regularPrice_desc">Price - decreasing</option>
                   <option value="regularPrice_asc">Price - increasing</option>
@@ -248,7 +248,7 @@ export default function Search() {
           </div>
           <div className="flex-1">
             <h1 className="search-hOne text-3xl font-semibold border-b-2 p-3 mt-5">
-              Listing results:
+              Listing results
             </h1>
             <div className="p-7 flex flex-wrap gap-4">
               {!loading && listings.length === 0 && (

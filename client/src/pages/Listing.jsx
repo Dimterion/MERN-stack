@@ -102,9 +102,11 @@ export default function Listing() {
                   : listing.regularPrice.toLocaleString("en-US")}
                 ${listing.type === "subscription" && " / month"}
               </p>
-              <p className="flex items-center mt-6 gap-2 text-sm">
+              <p className="flex items-center mt-6 gap-2 font-bold hover:underline">
                 <FaLink />
-                {listing.link}
+                <a href={listing.link} target="_blank" rel="noreferrer">
+                  Link
+                </a>
               </p>
               <div className="flex gap-4">
                 <p className="listing-type w-full max-w-[200px] text-center p-1">
