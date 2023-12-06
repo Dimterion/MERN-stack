@@ -155,10 +155,10 @@ export default function Home() {
                 className="text-sm hover:underline"
                 to={"/search?offer=true"}
               >
-                Show more offers
+                {"> "}Show more offers
               </Link>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-10">
               {offerListings.map((listing) => (
                 <ListingItem listing={listing} key={listing._id} />
               ))}
@@ -173,10 +173,10 @@ export default function Home() {
                 className="text-sm hover:underline"
                 to={"/search?type=subscription"}
               >
-                Show more subscriptions
+                {"> "}Show more subscriptions
               </Link>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4  mb-10">
               {subscriptionListings.map((listing) => (
                 <ListingItem listing={listing} key={listing._id} />
               ))}
@@ -193,10 +193,10 @@ export default function Home() {
                 className="text-sm hover:underline"
                 to={"/search?type=oneTimePurchase"}
               >
-                Show more one-time purchases
+                {"> "}Show more one-time purchases
               </Link>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4  mb-10">
               {oneTimePurchaseListings.map((listing) => (
                 <ListingItem listing={listing} key={listing._id} />
               ))}
