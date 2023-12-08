@@ -1,5 +1,9 @@
 export const skills = [
   {
+    id: 0,
+    name: "",
+  },
+  {
     id: 1,
     name: "html",
     level: 6,

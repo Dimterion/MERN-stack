@@ -2,73 +2,68 @@ import { FaAngleUp } from "react-icons/fa";
 import PropTypes from "prop-types";
 import { skills } from "../assets/aboutPageContent";
 
-function Skills({ skill, setSkill }) {
+function Skills({ skillName, setSkillName }) {
   const displayedSkills = skills.map((skill) => {
     return (
-      <div
-        key={skill.id}
-        onClick={() => setSkill(skill.name)}
-        className="about-skill flex gap-1 flex-wrap justify-between"
-      >
-        <div className="about-skillName uppercase">{skill.name}</div>
-        <div className="flex gap-2">
+      <article className="flex flex-col items-start" key={skill.id}>
+        {skill.name !== "" && (
           <div
-            className={skill.level > 0 ? "about-cubeActive" : "about-cube"}
-          ></div>
-          <div
-            className={
-              skill.level > 1
-                ? "about-cubeActive flex flex-col items-center justify-center"
-                : "about-cube flex flex-col items-center justify-center"
-            }
+            onClick={() => setSkillName(skill.name)}
+            className="about-skill flex gap-1 flex-wrap justify-between"
           >
-            <FaAngleUp />
+            <div className="about-skillName uppercase">{skill.name}</div>
+            <div className="flex gap-2">
+              <div
+                className={skill.level > 0 ? "about-cubeActive" : "about-cube"}
+              ></div>
+              <div
+                className={
+                  skill.level > 1
+                    ? "about-cubeActive flex flex-col items-center justify-center"
+                    : "about-cube flex flex-col items-center justify-center"
+                }
+              >
+                <FaAngleUp />
+              </div>
+              <div
+                className={
+                  skill.level > 2
+                    ? "about-cubeActive flex flex-col items-center justify-center"
+                    : "about-cube flex flex-col items-center justify-center"
+                }
+              ></div>
+              <div
+                className={
+                  skill.level > 3
+                    ? "about-cubeActive flex flex-col items-center justify-center"
+                    : "about-cube flex flex-col items-center justify-center"
+                }
+              >
+                <FaAngleUp />
+                <FaAngleUp />
+              </div>
+              <div
+                className={
+                  skill.level > 4
+                    ? "about-cubeActive flex flex-col items-center justify-center"
+                    : "about-cube flex flex-col items-center justify-center"
+                }
+              ></div>
+              <div
+                className={
+                  skill.level > 5
+                    ? "about-cubeActive flex flex-col items-center justify-center"
+                    : "about-cube flex flex-col items-center justify-center"
+                }
+              >
+                <FaAngleUp />
+                <FaAngleUp />
+                <FaAngleUp />
+              </div>
+            </div>
           </div>
-          <div
-            className={
-              skill.level > 2
-                ? "about-cubeActive flex flex-col items-center justify-center"
-                : "about-cube flex flex-col items-center justify-center"
-            }
-          ></div>
-          <div
-            className={
-              skill.level > 3
-                ? "about-cubeActive flex flex-col items-center justify-center"
-                : "about-cube flex flex-col items-center justify-center"
-            }
-          >
-            <FaAngleUp />
-            <FaAngleUp />
-          </div>
-          <div
-            className={
-              skill.level > 4
-                ? "about-cubeActive flex flex-col items-center justify-center"
-                : "about-cube flex flex-col items-center justify-center"
-            }
-          ></div>
-          <div
-            className={
-              skill.level > 5
-                ? "about-cubeActive flex flex-col items-center justify-center"
-                : "about-cube flex flex-col items-center justify-center"
-            }
-          >
-            <FaAngleUp />
-            <FaAngleUp />
-            <FaAngleUp />
-          </div>
-        </div>
-      </div>
-    );
-  });
-
-  return (
-    <article className="flex flex-row flex-wrap justify-around">
-      <div>{displayedSkills}</div>
-      <>
-        {skill === "html" && (
+        )}
+        {skillName === skill.name && skill.name !== "" && (
           <div className="w-2/4">
             <div className="flex flex-wrap gap-2 my-2 items-center">
               <div className="about-cubeActive flex flex-col items-center justify-center">
@@ -105,18 +100,16 @@ function Skills({ skill, setSkill }) {
             </div>
           </div>
         )}
-        {skill === "css" && <div className="w-2/4">CSS</div>}
-        {skill === "javaScript" && <div className="w-2/4">JavaScript</div>}
-        {skill === "react" && <div className="w-2/4">React</div>}
-        {skill === "" && <div className="w-2/4"></div>}
-      </>
-    </article>
-  );
+      </article>
+    );
+  });
+
+  return <>{displayedSkills}</>;
 }
 
 export default Skills;
 
 Skills.propTypes = {
-  skill: PropTypes.string,
-  setSkill: PropTypes.func,
+  skillName: PropTypes.string,
+  setSkillName: PropTypes.func,
 };

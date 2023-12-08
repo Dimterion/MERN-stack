@@ -4,7 +4,7 @@ import Skills from "../components/Skills";
 
 export default function About() {
   const [tab, setTab] = useState("skills");
-  const [skill, setSkill] = useState("");
+  const [skillName, setSkillName] = useState("");
 
   return (
     <>
@@ -40,7 +40,9 @@ export default function About() {
           <div>9,001 / 10,000 XP</div>
         </nav>
         <section>
-          {tab === "skills" && <Skills skill={skill} setSkill={setSkill} />}
+          {tab === "skills" && (
+            <Skills skillName={skillName} setSkillName={setSkillName} />
+          )}
           {tab === "objectives" && <>objectives</>}
           {tab === "archives" && <>archives</>}
           {tab === "map" && <>map</>}
