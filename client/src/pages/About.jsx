@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
+import Objectives from "../components/Objectives";
 
 export default function About() {
   const [tab, setTab] = useState("skills");
@@ -43,7 +44,7 @@ export default function About() {
           {tab === "skills" && (
             <Skills skillName={skillName} setSkillName={setSkillName} />
           )}
-          {tab === "objectives" && <>objectives</>}
+          {tab === "objectives" && <Objectives />}
           {tab === "archives" && <>archives</>}
           {tab === "map" && <>map</>}
         </section>

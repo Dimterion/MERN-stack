@@ -459,3 +459,8 @@ input[type="file"]::file-selector-button {
 .skills-active {
   border-color: var(--secondary);
 }
+
+/* Objectives Component */
+.objectives-fieldset {
+  border-color: var(--secondary);
+}
