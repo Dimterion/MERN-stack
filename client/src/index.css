@@ -461,6 +461,21 @@ input[type="file"]::file-selector-button {
 }
 
 /* Objectives Component */
+.objectives-article,
+.objectives-article div,
+.objectives-article div h2,
 .objectives-fieldset {
   border-color: var(--secondary);
+}
+
+.objectives-ul,
+li {
+  list-style-type: square;
+}
+
+.objectives-xpBar {
+  width: 500px;
+  max-width: 40vw;
+  height: 2rem;
+  background: var(--secondary);
 }

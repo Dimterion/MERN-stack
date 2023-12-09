@@ -39,4 +39,13 @@ export const skills = [
     levelThreeDesc:
       "Switched to Next.js, became Vercel ambassador and regularly talks about the advantages of using server components.",
   },
+  {
+    id: 6,
+    name: "git",
+    level: 4,
+    levelOneDesc: "Knows the difference between Git and GitHub.",
+    levelTwoDesc: "Writes proper commit messages in present tense.",
+    levelThreeDesc:
+      "Keeps contributions streak for more than a year by contributing to other devs repos every day.",
+  },
 ];
