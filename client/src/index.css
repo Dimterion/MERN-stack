@@ -454,3 +454,8 @@ input[type="file"]::file-selector-button {
 .contact-textarea {
   background: var(--additional);
 }
+
+/* Skills Component */
+.skills-active {
+  border-color: var(--secondary);
+}

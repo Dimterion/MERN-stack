@@ -5,7 +5,14 @@ import { skills } from "../assets/aboutPageContent";
 function Skills({ skillName, setSkillName }) {
   const displayedSkills = skills.map((skill) => {
     return (
-      <article className="flex flex-col items-start" key={skill.id}>
+      <article
+        className={
+          skillName === skill.name && skill.name !== ""
+            ? "skills-active flex flex-row flex-wrap items-start justify-between border-2"
+            : "flex flex-row flex-wrap items-start justify-between"
+        }
+        key={skill.id}
+      >
         {skill.name !== "" && (
           <div
             onClick={() => setSkillName(skill.name)}
