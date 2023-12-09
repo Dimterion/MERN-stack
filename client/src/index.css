@@ -462,8 +462,8 @@ input[type="file"]::file-selector-button {
 
 /* Objectives Component */
 .objectives-article,
-.objectives-article div,
-.objectives-article div h2,
+.objectives-article > div,
+.objectives-article > div > h2,
 .objectives-fieldset {
   border-color: var(--secondary);
 }
@@ -471,6 +471,55 @@ input[type="file"]::file-selector-button {
 .objectives-ul,
 li {
   list-style-type: square;
+}
+
+.objectives-img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #edede9;
+  border-radius: 60%;
+  border: 5px solid #000814;
+}
+
+.objectives-imgHelmet {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 100px;
+  height: 60px;
+  background: #8d99ae;
+  border-radius: 30px 30px 0 0;
+}
+
+.objectives-imgVisor {
+  position: absolute;
+  top: 35px;
+  left: 5.5px;
+  width: 80px;
+  height: 8px;
+  border-radius: 5px;
+  background: #000814;
+}
+
+.objectives-imgMouth {
+  position: absolute;
+  top: 75px;
+  left: 32.5px;
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+  background: #000814;
+}
+
+.objectives-imgChin {
+  position: absolute;
+  top: 85px;
+  left: 35px;
+  width: 20px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000814;
 }
 
 .objectives-xpBar {
