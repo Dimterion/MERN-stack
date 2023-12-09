@@ -32,10 +32,10 @@ export default function About() {
               Archives
             </li>
             <li
-              className={tab === "map" ? "about-ulLiActive" : ""}
-              onClick={() => setTab("map")}
+              className={tab === "profile" ? "about-ulLiActive" : ""}
+              onClick={() => setTab("profile")}
             >
-              Map
+              Profile
             </li>
           </ul>
           <div>9,001 / 10,000 XP</div>
@@ -46,7 +46,7 @@ export default function About() {
           )}
           {tab === "objectives" && <Objectives />}
           {tab === "archives" && <>archives</>}
-          {tab === "map" && <>map</>}
+          {tab === "profile" && <>profile</>}
         </section>
       </div>
     </>

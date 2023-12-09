@@ -34,8 +34,18 @@ export default function Objectives() {
             </ul>
           </div>
           <div className="objectives-img">
-            <div className="objectives-imgHelmet"></div>
-            <div className="objectives-imgVisor"></div>
+            <div
+              className={
+                classified
+                  ? "objectives-imgHelmet"
+                  : "objectives-imgHelmetActive"
+              }
+            ></div>
+            <div
+              className={
+                classified ? "objectives-imgVisor" : "objectives-imgVisorActive"
+              }
+            ></div>
             <div className="objectives-imgMouth"></div>
             <div className="objectives-imgChin"></div>
           </div>
