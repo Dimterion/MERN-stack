@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
 import Objectives from "../components/Objectives";
+import Profile from "../components/Profile";
 
 export default function About() {
   const [tab, setTab] = useState("skills");
@@ -46,7 +47,7 @@ export default function About() {
           )}
           {tab === "objectives" && <Objectives />}
           {tab === "archives" && <>archives</>}
-          {tab === "profile" && <>profile</>}
+          {tab === "profile" && <Profile />}
         </section>
       </div>
     </>

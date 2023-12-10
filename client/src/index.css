@@ -548,3 +548,63 @@ li {
   height: 2rem;
   background: var(--secondary);
 }
+
+/* Profile Component */
+.profile-article {
+  max-width: 600px;
+  margin: auto;
+  border-color: var(--secondary);
+}
+
+.profile-articleImg {
+  max-width: 85vw;
+  max-height: 50vh;
+  object-fit: cover;
+  margin: auto;
+  border: 2px solid var(--secondary);
+  animation: profile-articleImg 2s linear;
+}
+
+@keyframes profile-articleImg {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.profile-articleHeadingOne {
+  animation: profile-articleHeading 4s linear;
+}
+
+@keyframes profile-articleHeading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.profile-articleHeadingTwo {
+  animation: profile-articleHeading 6s linear;
+}
+
+.profile-articleHeadingThree {
+  animation: profile-articleHeading 8s linear;
+}
+
+.profile-articleParagraph {
+  animation: profile-articleHeading 12s linear;
+}
+
+.profile-articleSpan {
+  text-decoration: line-through;
+}
