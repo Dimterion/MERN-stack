@@ -556,6 +556,10 @@ li {
   border-color: var(--secondary);
 }
 
+.profile-article > div {
+  border-color: var(--secondary);
+}
+
 .profile-articleImg {
   max-width: 85vw;
   max-height: 50vh;
@@ -607,4 +611,9 @@ li {
 
 .profile-articleSpan {
   text-decoration: line-through;
+}
+
+/* Archives Component */
+.archives-article {
+  border-color: var(--secondary);
 }

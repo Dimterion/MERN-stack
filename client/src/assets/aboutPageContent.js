@@ -1,3 +1,8 @@
+import mediumImg from "../assets/images/mediumImg.jpg";
+import twitterImg from "../assets/images/twitterImg.jpg";
+import gitHubImg from "../assets/images/gitHubImg.jpg";
+import personalSiteImg from "../assets/images/personalSiteImg.jpg";
+
 export const skills = [
   {
     id: 0,
@@ -55,24 +60,28 @@ export const archives = [
     id: 0,
     name: "Blog",
     link: "https://medium.com/@dimterion",
-    img: "",
+    img: mediumImg,
+    alt: "Letter M in a circle.",
   },
   {
     id: 1,
     name: "GitHub",
     link: "https://github.com/Dimterion",
-    img: "",
+    img: gitHubImg,
+    alt: "GitHub logo.",
   },
   {
     id: 2,
-    name: "Twitter",
+    name: "xTwitter",
     link: "https://twitter.com/Dimterion",
-    img: "",
+    img: twitterImg,
+    alt: "Letter X in a circle.",
   },
   {
     id: 3,
     name: "Personal page",
     link: "https://dimterion.github.io/",
-    img: "",
+    img: personalSiteImg,
+    alt: "Letter D.",
   },
 ];
