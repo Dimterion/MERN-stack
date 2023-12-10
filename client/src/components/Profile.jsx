@@ -21,7 +21,7 @@ export default function Profile() {
       <p className="profile-articleParagraph m-4">
         P.S. Will work for at least 5 years of minimum, required, necessary,
         mandatory, obligatory experience to get a position of an entry-level
-        associate junior assistant to a developer.
+        associate junior assistant (to the) seasoned developer.
       </p>
     </article>
   );

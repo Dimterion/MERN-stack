@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
 import Objectives from "../components/Objectives";
+import Archives from "../components/Archives";
 import Profile from "../components/Profile";
 
 export default function About() {
@@ -46,7 +47,7 @@ export default function About() {
             <Skills skillName={skillName} setSkillName={setSkillName} />
           )}
           {tab === "objectives" && <Objectives />}
-          {tab === "archives" && <>archives</>}
+          {tab === "archives" && <Archives />}
           {tab === "profile" && <Profile />}
         </section>
       </div>

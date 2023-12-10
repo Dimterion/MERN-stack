@@ -49,3 +49,30 @@ export const skills = [
       "Keeps contributions streak for more than a year by contributing to other devs repos every day.",
   },
 ];
+
+export const archives = [
+  {
+    id: 0,
+    name: "Blog",
+    link: "https://medium.com/@dimterion",
+    img: "",
+  },
+  {
+    id: 1,
+    name: "GitHub",
+    link: "https://github.com/Dimterion",
+    img: "",
+  },
+  {
+    id: 2,
+    name: "Twitter",
+    link: "https://twitter.com/Dimterion",
+    img: "",
+  },
+  {
+    id: 3,
+    name: "Personal page",
+    link: "https://dimterion.github.io/",
+    img: "",
+  },
+];
