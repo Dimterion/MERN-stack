@@ -83,8 +83,8 @@ export default function Home() {
           ROBO<span>CODE</span>
         </h1>
         <p>You must comply to proceed, citizen.</p>
-        <div className="home-complyBtnWrap">
-          <FaChevronRight />
+        <div className="home-complyBtnWrap relative">
+          <FaChevronRight className="home-chevron absolute -left-8" />
           <button
             onClick={() => {
               localStorage.setItem("content", "");

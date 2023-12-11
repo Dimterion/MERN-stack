@@ -181,6 +181,13 @@ body {
   border-radius: 10%;
 }
 
+@media (max-width: 500px) {
+  .home-startBtnWrap {
+    border: 1.5rem solid var(--sub);
+    border-radius: 15%;
+  }
+}
+
 .home-startBtnWrap h1 {
   font-size: 4rem;
   animation: typingHeading 2s steps(8);
@@ -253,12 +260,29 @@ body {
   max-width: 50vw;
   padding: 5px 15px 4px;
   text-transform: uppercase;
-  opacity: 0.5;
   font-size: 1.5rem;
 }
 
 .home-complyBtnWrap button:hover {
-  opacity: 1;
+  opacity: 0.8;
+}
+
+.home-chevron {
+  animation: 1.5s home-chevron infinite ease-in-out;
+}
+
+@keyframes home-chevron {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .home-startBtn {
