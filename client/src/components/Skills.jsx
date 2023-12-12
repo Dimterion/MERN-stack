@@ -8,18 +8,22 @@ export default function Skills({ skillName, setSkillName }) {
       <article
         className={
           skillName === skill.name && skill.name !== ""
-            ? "skills-active flex flex-row flex-wrap items-center justify-between border-2 my-2"
-            : "flex flex-row flex-wrap items-center justify-between my-2"
+            ? "skills-active flex flex-row flex-wrap items-center justify-between border-2 m-1 md:m-2"
+            : "flex flex-row flex-wrap items-center justify-between m-1 md:m-2"
         }
         key={skill.id}
       >
         {skill.name !== "" && (
           <div
-            onClick={() => setSkillName(skill.name)}
+            onClick={() => {
+              skillName !== "" && skillName === skill.name
+                ? setSkillName("")
+                : setSkillName(skill.name);
+            }}
             className="about-skill flex gap-1 flex-wrap justify-between"
           >
             <div className="about-skillName uppercase">{skill.name}</div>
-            <div className="flex gap-2">
+            <div className="flex gap-1 md:gap-2">
               <div
                 className={skill.level > 0 ? "about-cubeActive" : "about-cube"}
               ></div>
@@ -71,7 +75,7 @@ export default function Skills({ skillName, setSkillName }) {
           </div>
         )}
         {skillName === skill.name && skill.name !== "" && (
-          <div className="w-2/4">
+          <div className="w-2/4 ml-2">
             <div className="flex flex-wrap gap-2 my-2 items-center">
               <div className="about-cubeActive flex flex-col items-center justify-center">
                 <FaAngleUp />
