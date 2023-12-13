@@ -201,6 +201,7 @@ export default function Profile() {
               alt="Profile image."
               className="profile-img h-24 w-24 object-cover cursor-pointer self-center mt-2"
             />
+            <pre className="text-center text-xs">Click on the image to update it.</pre>
             <p className="text-sm self-center">
               {fileUploadError ? (
                 <span>Image upload error (must be less than 2mb).</span>

@@ -136,8 +136,8 @@ export default function Home() {
         </aside>
       )}
       {showListings && (
-        <div className="signIn-section pt-4">
-          <Swiper navigation>
+        <div className="home-listingsContainer signIn-section pt-4">
+          <Swiper navigation className="swiper border-b-2 pb-4">
             {offerListings &&
               offerListings.length > 0 &&
               offerListings.map((listing) => (

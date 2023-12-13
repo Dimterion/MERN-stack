@@ -133,6 +133,7 @@ body {
 .home-asideInner {
   border: 3px solid rgba(116, 198, 157, 0.3);
   animation: home-asideInner 1s linear;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes home-asideInner {
@@ -153,6 +154,24 @@ body {
   100% {
     border: 3px solid rgba(116, 198, 157, 1);
   }
+}
+
+.home-listingsContainer {
+  animation: home-listingsContainer 1s ease-in-out;
+}
+
+@keyframes home-listingsContainer {
+  0% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.swiper {
+  border-color: var(--secondary);
 }
 
 .swiper-button-prev,
