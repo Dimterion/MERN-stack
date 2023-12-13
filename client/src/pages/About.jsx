@@ -42,7 +42,7 @@ export default function About() {
           </ul>
           <div>9,001 / 10,000 XP</div>
         </nav>
-        <section>
+        <section className="mb-4">
           {tab === "skills" && (
             <Skills skillName={skillName} setSkillName={setSkillName} />
           )}

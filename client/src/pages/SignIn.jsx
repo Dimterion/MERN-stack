@@ -57,9 +57,9 @@ export default function SignIn() {
       <section className="signIn-section">
         <div className="p-3 max-w-lg mx-auto">
           <h1 className="text-3xl text-center font-semibold my-7">
-            Please write down your login.
+            Please write down your login
           </h1>
-          <h2 className="text-center my-4">You have two fields to comply.</h2>
+          <h2 className="text-center my-4">You have two fields to comply</h2>
           <form
             onSubmit={handleSubmit}
             className="signIn-form flex flex-col gap-4"

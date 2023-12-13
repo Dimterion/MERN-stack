@@ -53,51 +53,54 @@ export default function SignUp() {
   return (
     <>
       <Header />
-      <div className="p-3 max-w-lg mx-auto">
-        <h1 className="text-3xl text-center font-semibold my-7">
-          There{"'"}s a new coder in town.
-        </h1>
-        <form
-          onSubmit={handleSubmit}
-          className="signIn-form flex flex-col gap-4"
-        >
-          <input
-            type="text"
-            placeholder="Username"
-            className="border p-3"
-            id="username"
-            onChange={handleChange}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="border p-3"
-            id="email"
-            onChange={handleChange}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="border p-3"
-            id="password"
-            onChange={handleChange}
-          />
-          <button
-            disabled={loading}
-            className="p-3 uppercase hover:opacity-80 disabled:opacity-80"
+      <section className="signIn-section">
+        <div className="p-3 max-w-lg mx-auto">
+          <h1 className="text-3xl text-center font-semibold my-7">
+            There{"'"}s a new coder in town
+          </h1>
+          <h2 className="text-center my-4">You have three fields to comply</h2>
+          <form
+            onSubmit={handleSubmit}
+            className="signIn-form flex flex-col gap-4"
           >
-            {loading ? "Loading..." : "Sign Up"}
-          </button>
-          <OAuth />
-        </form>
-        <div className="flex gap-2 mt-5">
-          <p>Already registered?</p>
-          <Link to="/sign-in">
-            <span className="signIn-signUpLink">Proceed here.</span>
-          </Link>
+            <input
+              type="text"
+              placeholder="Username"
+              className="border p-3"
+              id="username"
+              onChange={handleChange}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="border p-3"
+              id="email"
+              onChange={handleChange}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              className="border p-3"
+              id="password"
+              onChange={handleChange}
+            />
+            <button
+              disabled={loading}
+              className="p-3 uppercase hover:opacity-80 disabled:opacity-80"
+            >
+              {loading ? "Loading..." : "Sign Up"}
+            </button>
+            <OAuth />
+          </form>
+          <div className="flex gap-2 mt-5">
+            <p>Already registered?</p>
+            <Link to="/sign-in">
+              <span className="signIn-signUpLink">Proceed here.</span>
+            </Link>
+          </div>
+          {error && <p className="mt-5">{error}</p>}
         </div>
-        {error && <p className="mt-5">{error}</p>}
-      </div>
+      </section>
     </>
   );
 }
