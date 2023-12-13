@@ -652,6 +652,10 @@ li {
   animation: profile-articleHeading 12s linear;
 }
 
+.profile-articleDiv {
+  animation: profile-articleHeading 14s linear;
+}
+
 .profile-articleSpan {
   text-decoration: line-through;
 }
