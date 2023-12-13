@@ -176,16 +176,9 @@ body {
   justify-content: center;
   text-align: center;
   overflow: auto;
-  border: 2rem solid var(--sub);
+  border: 1.5rem solid var(--sub);
   background-color: var(--primary);
-  border-radius: 10%;
-}
-
-@media (max-width: 500px) {
-  .home-startBtnWrap {
-    border: 1.5rem solid var(--sub);
-    border-radius: 15%;
-  }
+  border-radius: 15%;
 }
 
 .home-startBtnWrap h1 {
@@ -258,13 +251,20 @@ body {
   border: 2px solid var(--secondary);
   width: 200px;
   max-width: 50vw;
-  padding: 5px 15px 4px;
+  padding: 5px 15px 3.5px;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  transition: 0.5s;
 }
 
 .home-complyBtnWrap button:hover {
-  opacity: 0.8;
+  background: var(--secondary);
+  color: var(--primary);
+  transition: 0.5s;
+}
+
+.home-complyBtnWrap button:active {
+  scale: 0.8;
 }
 
 .home-chevron {

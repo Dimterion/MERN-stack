@@ -16,6 +16,7 @@ export default function Home() {
       ? ""
       : "turnedOff"
   );
+  const [showListings, setShowListings] = useState(false);
   const [offerListings, setOfferListings] = useState([]);
   const [oneTimePurchaseListings, setOneTimePurchaseListings] = useState([]);
   const [subscriptionListings, setSubscriptionListings] = useState([]);
@@ -108,102 +109,113 @@ export default function Home() {
       </button>
     </section>
   ) : (
-    <div>
+    <>
       <Header header={"header-header"} />
-      <aside className="home-aside relative mb-12">
-        <div className="home-verticalLine"></div>
-        <div className="home-horizontalLine"></div>
-        <div className="home-asideInner flex flex-col gap-4 p-20 px-3 w-[260px] max-w-[95vw] mx-auto my-40">
-          <h1 className="font-bold text-3xl">
-            Find your Prime <span style={{ color: "#2d6a4f" }}>coding</span>
-            <br />
-            Directives
-          </h1>
-          <div className="home-subHeading">
-            Dev or AI,
-            <br />
-            you{"'"}re coding with me
+      {!showListings && (
+        <aside className="home-aside relative">
+          <div className="home-verticalLine"></div>
+          <div className="home-horizontalLine"></div>
+          <div className="home-asideInner flex flex-col items-start gap-4 py-20 px-3 w-[260px] max-w-[95vw] mx-auto my-40">
+            <h1 className="font-bold text-3xl">
+              Find your Prime <span style={{ color: "#2d6a4f" }}>coding</span>
+              <br />
+              Directives
+            </h1>
+            <div className="home-subHeading">
+              Dev or AI,
+              <br />
+              you{"'"}re coding with me
+            </div>
+            <button
+              onClick={() => setShowListings(true)}
+              className="font-bold hover:underline"
+            >
+              {">> "}Commence search
+            </button>
           </div>
-          <Link to={"/search"} className="font-bold hover:underline">
-            {">> "}Commence search
-          </Link>
+        </aside>
+      )}
+      {showListings && (
+        <div className="signIn-section pt-4">
+          <Swiper navigation>
+            {offerListings &&
+              offerListings.length > 0 &&
+              offerListings.map((listing) => (
+                <SwiperSlide key={listing._id}>
+                  <Link to={`/listing/${listing._id}`}>
+                    <div
+                      style={{
+                        background: `url(${listing.imageUrls[0]}) center no-repeat`,
+                        backgroundSize: "cover",
+                      }}
+                      className="h-[350px] w-[1000px] m-auto max-w-[90vw] max-h-[50vh]"
+                    ></div>
+                  </Link>
+                </SwiperSlide>
+              ))}
+          </Swiper>
+          <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-10">
+            {offerListings && offerListings.length > 0 && (
+              <>
+                <div className="my-3">
+                  <h2 className="text-2xl font-semibold">Recent offers</h2>
+                  <Link
+                    className="text-sm hover:underline"
+                    to={"/search?offer=true"}
+                  >
+                    {"> "}Show more offers
+                  </Link>
+                </div>
+                <div className="flex flex-wrap gap-4 mb-10">
+                  {offerListings.map((listing) => (
+                    <ListingItem listing={listing} key={listing._id} />
+                  ))}
+                </div>
+              </>
+            )}
+            {subscriptionListings && subscriptionListings.length > 0 && (
+              <>
+                <div className="my-3">
+                  <h2 className="text-2xl font-semibold">
+                    Recent subscriptions
+                  </h2>
+                  <Link
+                    className="text-sm hover:underline"
+                    to={"/search?type=subscription"}
+                  >
+                    {"> "}Show more subscriptions
+                  </Link>
+                </div>
+                <div className="flex flex-wrap gap-4  mb-10">
+                  {subscriptionListings.map((listing) => (
+                    <ListingItem listing={listing} key={listing._id} />
+                  ))}
+                </div>
+              </>
+            )}
+            {oneTimePurchaseListings && oneTimePurchaseListings.length > 0 && (
+              <>
+                <div className="my-3">
+                  <h2 className="text-2xl font-semibold">
+                    Recent one-time purchases
+                  </h2>
+                  <Link
+                    className="text-sm hover:underline"
+                    to={"/search?type=oneTimePurchase"}
+                  >
+                    {"> "}Show more one-time purchases
+                  </Link>
+                </div>
+                <div className="flex flex-wrap gap-4  mb-10">
+                  {oneTimePurchaseListings.map((listing) => (
+                    <ListingItem listing={listing} key={listing._id} />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
-      </aside>
-      <Swiper navigation>
-        {offerListings &&
-          offerListings.length > 0 &&
-          offerListings.map((listing) => (
-            <SwiperSlide key={listing._id}>
-              <Link to={`/listing/${listing._id}`}>
-                <div
-                  style={{
-                    background: `url(${listing.imageUrls[0]}) center no-repeat`,
-                    backgroundSize: "cover",
-                  }}
-                  className="h-[350px] w-[1000px] m-auto max-w-[90vw] max-h-[50vh]"
-                ></div>
-              </Link>
-            </SwiperSlide>
-          ))}
-      </Swiper>
-      <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-10">
-        {offerListings && offerListings.length > 0 && (
-          <>
-            <div className="my-3">
-              <h2 className="text-2xl font-semibold">Recent offers</h2>
-              <Link
-                className="text-sm hover:underline"
-                to={"/search?offer=true"}
-              >
-                {"> "}Show more offers
-              </Link>
-            </div>
-            <div className="flex flex-wrap gap-4 mb-10">
-              {offerListings.map((listing) => (
-                <ListingItem listing={listing} key={listing._id} />
-              ))}
-            </div>
-          </>
-        )}
-        {subscriptionListings && subscriptionListings.length > 0 && (
-          <>
-            <div className="my-3">
-              <h2 className="text-2xl font-semibold">Recent subscriptions</h2>
-              <Link
-                className="text-sm hover:underline"
-                to={"/search?type=subscription"}
-              >
-                {"> "}Show more subscriptions
-              </Link>
-            </div>
-            <div className="flex flex-wrap gap-4  mb-10">
-              {subscriptionListings.map((listing) => (
-                <ListingItem listing={listing} key={listing._id} />
-              ))}
-            </div>
-          </>
-        )}
-        {oneTimePurchaseListings && oneTimePurchaseListings.length > 0 && (
-          <>
-            <div className="my-3">
-              <h2 className="text-2xl font-semibold">
-                Recent one-time purchases
-              </h2>
-              <Link
-                className="text-sm hover:underline"
-                to={"/search?type=oneTimePurchase"}
-              >
-                {"> "}Show more one-time purchases
-              </Link>
-            </div>
-            <div className="flex flex-wrap gap-4  mb-10">
-              {oneTimePurchaseListings.map((listing) => (
-                <ListingItem listing={listing} key={listing._id} />
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-    </div>
+      )}
+    </>
   );
 }
