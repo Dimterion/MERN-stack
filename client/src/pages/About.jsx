@@ -13,8 +13,8 @@ export default function About() {
     <>
       <Header />
       <section className="about-section">
-        <nav className="flex items-center justify-between flex-wrap px-2 my-6">
-          <ul className="about-ul uppercase flex gap-2 flex-wrap">
+        <nav className="flex items-center justify-center md:justify-between gap-4 flex-wrap px-2 my-6">
+          <ul className="about-ul uppercase flex justify-center gap-2 flex-wrap">
             <li
               className={
                 tab === "skills" ? "about-ulLiActive" : "hover:opacity-80"
