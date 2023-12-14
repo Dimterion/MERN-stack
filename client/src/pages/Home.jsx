@@ -165,6 +165,9 @@ export default function Home() {
             <h3 className="text-center italic">(former Codetroit)</h3>
           </div>
           <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-6">
+            {offerListings.length === 0 &&
+              subscriptionListings.length === 0 &&
+              oneTimePurchaseListings.length === 0 && <p>No listings found.</p>}
             {offerListings && offerListings.length > 0 && (
               <>
                 <div className="my-3">

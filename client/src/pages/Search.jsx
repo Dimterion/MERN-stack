@@ -247,12 +247,12 @@ export default function Search() {
             </form>
           </div>
           <div className="flex-1">
-            <h1 className="search-hOne text-3xl font-semibold border-b-2 p-3 mt-5">
-              Listing results
+            <h1 className="search-hOne text-3xl font-semibold border-b-2 p-3">
+              Results
             </h1>
             <div className="p-7 flex flex-wrap gap-4">
               {!loading && listings.length === 0 && (
-                <p className="text-xl">No listing found.</p>
+                <p className="text-xl">No listings found.</p>
               )}
               {loading && (
                 <p className="text-xltext-center w-full">Loading...</p>

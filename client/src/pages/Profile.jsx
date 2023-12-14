@@ -201,14 +201,18 @@ export default function Profile() {
               alt="Profile image."
               className="profile-img h-24 w-24 object-cover cursor-pointer self-center mt-2"
             />
-            <pre className="text-center text-xs">Click on the image to update it.</pre>
+            <pre className="text-center text-xs">
+              Click on the image to update it
+            </pre>
             <p className="text-sm self-center">
               {fileUploadError ? (
-                <span>Image upload error (must be less than 2mb).</span>
+                <span className="opacity-50">
+                  Image upload error (must be less than 2mb).
+                </span>
               ) : filePerc > 0 && filePerc < 100 ? (
-                <span>{`Uploading ${filePerc}%.`}</span>
+                <span className="opacity-50">{`Uploading ${filePerc}%.`}</span>
               ) : filePerc === 100 ? (
-                <span>Image is successfully uploaded.</span>
+                <span className="opacity-50">Image uploaded</span>
               ) : (
                 ""
               )}
@@ -264,8 +268,8 @@ export default function Profile() {
             </span>
           </div>
           <p className="mt-5">{error ? error : ""}</p>
-          <p className="mt-5">
-            {updateSuccess ? "Information is updated successfully." : ""}
+          <p className="mt-5 opacity-50">
+            {updateSuccess ? "Data updated" : ""}
           </p>
           <button
             onClick={handleShowListings}
