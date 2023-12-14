@@ -136,7 +136,7 @@ export default function Home() {
         </aside>
       )}
       {showListings && (
-        <div className="home-listingsContainer signIn-section pt-4">
+        <div className="home-listingsContainer pt-4">
           <Swiper navigation className="swiper border-b-2 pb-4">
             {offerListings &&
               offerListings.length > 0 &&
@@ -154,15 +154,15 @@ export default function Home() {
                 </SwiperSlide>
               ))}
           </Swiper>
-          <div className="home-listingsTextContainer border-b-2 pb-1">
-            <p className="w-[1000px] max-w-[95vw] mx-auto my-4 text-center">
+          <div className="home-listingsTextContainer border-b-2 pb-4">
+            <p className="w-[1000px] max-w-[95vw] mx-auto py-4 text-center">
               Citizen, please familiarize yourself with our suggestions of the
               resources that might help you become a potential robocoder. On
               behalf of the AI department we wish you luck in getting better
               than us. Thank you for your cooperation*.
             </p>
-            <h2 className="text-right mr-2 italic">Prog City administration</h2>
-            <h3 className="text-right mr-2 italic">(former Codetroit)</h3>
+            <h2 className="text-center italic">Prog City administration</h2>
+            <h3 className="text-center italic">(former Codetroit)</h3>
           </div>
           <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-6">
             {offerListings && offerListings.length > 0 && (
@@ -173,7 +173,7 @@ export default function Home() {
                     className="text-sm hover:underline"
                     to={"/search?offer=true"}
                   >
-                    {"> "}Show more offers
+                    {"> "}Show more
                   </Link>
                 </div>
                 <div className="flex flex-wrap gap-4 mb-10">
@@ -187,13 +187,13 @@ export default function Home() {
               <>
                 <div className="my-3">
                   <h2 className="text-2xl font-semibold">
-                    Recent subscriptions
+                    Subscription-based courses
                   </h2>
                   <Link
                     className="text-sm hover:underline"
                     to={"/search?type=subscription"}
                   >
-                    {"> "}Show more subscriptions
+                    {"> "}Show more
                   </Link>
                 </div>
                 <div className="flex flex-wrap gap-4  mb-10">
@@ -207,13 +207,13 @@ export default function Home() {
               <>
                 <div className="my-3">
                   <h2 className="text-2xl font-semibold">
-                    Recent one-time purchases
+                    One-time purchase courses
                   </h2>
                   <Link
                     className="text-sm hover:underline"
                     to={"/search?type=oneTimePurchase"}
                   >
-                    {"> "}Show more one-time purchases
+                    {"> "}Show more
                   </Link>
                 </div>
                 <div className="flex flex-wrap gap-4  mb-10">

@@ -96,89 +96,6 @@ body {
 }
 
 /* Home Page */
-.home-aside {
-  border: 2px solid var(--secondary);
-}
-
-.home-verticalLine {
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  background: var(--secondary);
-  left: 50%;
-  opacity: 0.1;
-  animation: 0.2s home-line 0.8s linear;
-}
-
-.home-horizontalLine {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: var(--secondary);
-  top: 50%;
-  opacity: 0.1;
-  animation: 0.2s home-line 0.8s linear;
-}
-
-@keyframes home-line {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.3;
-  }
-}
-
-.home-asideInner {
-  border: 3px solid rgba(116, 198, 157, 0.3);
-  animation: home-asideInner 1s linear;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-@keyframes home-asideInner {
-  0% {
-    padding: 8rem 0.75rem;
-    border: 3px solid rgba(116, 198, 157, 0.3);
-  }
-
-  80% {
-    padding: 5rem 0.75rem;
-    border: 3px solid rgba(116, 198, 157, 0.3);
-  }
-
-  90% {
-    border: 3px solid rgba(116, 198, 157, 1);
-  }
-
-  100% {
-    border: 3px solid rgba(116, 198, 157, 1);
-  }
-}
-
-.home-listingsContainer {
-  animation: home-listingsContainer 1.5s ease-in-out;
-}
-
-@keyframes home-listingsContainer {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.swiper {
-  border-color: var(--secondary);
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: var(--secondary);
-}
-
 .home-startBtnSection {
   background-color: var(--sub);
 }
@@ -304,6 +221,90 @@ body {
   }
 }
 
+.home-aside {
+  border: 2px solid var(--secondary);
+}
+
+.home-verticalLine {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: var(--secondary);
+  left: 50%;
+  opacity: 0.1;
+  animation: 0.2s home-line 0.8s linear;
+}
+
+.home-horizontalLine {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary);
+  top: 50%;
+  opacity: 0.1;
+  animation: 0.2s home-line 0.8s linear;
+}
+
+@keyframes home-line {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.home-asideInner {
+  border: 3px solid rgba(116, 198, 157, 0.3);
+  animation: home-asideInner 1s linear;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes home-asideInner {
+  0% {
+    padding: 8rem 0.75rem;
+    border: 3px solid rgba(116, 198, 157, 0.3);
+  }
+
+  80% {
+    padding: 5rem 0.75rem;
+    border: 3px solid rgba(116, 198, 157, 0.3);
+  }
+
+  90% {
+    border: 3px solid rgba(116, 198, 157, 1);
+  }
+
+  100% {
+    border: 3px solid rgba(116, 198, 157, 1);
+  }
+}
+
+.home-listingsContainer {
+  border-top: 2px solid var(--secondary);
+  animation: home-listingsContainer 1.5s ease-in-out;
+}
+
+@keyframes home-listingsContainer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.swiper {
+  border-color: var(--secondary);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--secondary);
+}
+
 .home-listingsTextContainer {
   border-color: var(--secondary);
   background: rgba(0, 0, 0, 0.5);
@@ -321,12 +322,12 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.active-btn {
-  color: var(--secondary);
-}
-
 .home-subHeading {
   color: var(--tertiary);
+}
+
+.active-btn {
+  color: var(--secondary);
 }
 
 /* Listing Item Component */
