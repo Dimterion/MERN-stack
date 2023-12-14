@@ -1,4 +1,4 @@
-import { FaAngleUp } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import PropTypes from "prop-types";
 import { skills } from "../assets/aboutPageContent";
 
@@ -114,9 +114,11 @@ export default function Skills({ skillName, setSkillName }) {
 
   return (
     <>
-      <h2 className="ml-6 text-lg">
+      <h2 className="flex flex-row justify-around items-center max-w-[800px] px-2 m-auto text-center">
+        <FaAngleDown />
         Citizen, please verify your skill level to comply with the minimum
         requirements.
+        <FaAngleDown />
       </h2>
       {displayedSkills}
       <div className="skills-QuoteContainer border-2 w-[360px] max-w-[90vw] p-2 mx-auto my-10 text-right">

@@ -365,6 +365,10 @@ body {
 }
 
 /* About Page */
+.about-section {
+  border-top: 2px solid var(--secondary);
+}
+
 .about-ul li {
   position: relative;
   display: flex;

@@ -12,7 +12,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <div className="signIn-section">
+      <section className="about-section">
         <nav className="flex items-center justify-between flex-wrap px-2 my-6">
           <ul className="about-ul uppercase flex gap-2 flex-wrap">
             <li
@@ -58,7 +58,7 @@ export default function About() {
           {tab === "archives" && <Archives />}
           {tab === "profile" && <Profile />}
         </section>
-      </div>
+      </section>
     </>
   );
 }
