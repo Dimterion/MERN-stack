@@ -112,7 +112,24 @@ export default function Skills({ skillName, setSkillName }) {
     );
   });
 
-  return <>{displayedSkills}</>;
+  return (
+    <>
+      <h2 className="ml-6 text-lg">
+        Citizen, please verify your skill level to comply with the minimum
+        requirements.
+      </h2>
+      {displayedSkills}
+      <div className="skills-QuoteContainer border-2 w-[360px] max-w-[90vw] p-2 mx-auto my-10 text-right">
+        <p className="text-lg underline">RoboQuote of the day:</p>
+        <p className="text-lg text-center my-2 italic">
+          I{"'"}ll fix you. I fix everything.
+        </p>
+        <p className="text-sm w-[200px] ">
+          (Full-Stack dev when looking at the legacy codebase)
+        </p>
+      </div>
+    </>
+  );
 }
 
 Skills.propTypes = {

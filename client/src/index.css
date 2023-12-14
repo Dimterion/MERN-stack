@@ -157,16 +157,16 @@ body {
 }
 
 .home-listingsContainer {
-  animation: home-listingsContainer 1s ease-in-out;
+  animation: home-listingsContainer 1.5s ease-in-out;
 }
 
 @keyframes home-listingsContainer {
   0% {
-    transform: translateX(-10%);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -304,6 +304,11 @@ body {
   }
 }
 
+.home-listingsTextContainer {
+  border-color: var(--secondary);
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .home-startBtn {
   position: absolute;
   bottom: 0;
@@ -327,6 +332,7 @@ body {
 /* Listing Item Component */
 .listingItem-article {
   border: 1px solid var(--tertiary);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* Sign In Page */
@@ -500,6 +506,10 @@ input[type="file"]::file-selector-button {
 
 /* Skills Component */
 .skills-active {
+  border-color: var(--secondary);
+}
+
+.skills-QuoteContainer {
   border-color: var(--secondary);
 }
 

@@ -20,8 +20,18 @@ export default function Archives() {
   });
 
   return (
-    <article className="flex flex-row flex-wrap justify-around">
-      {displayedArchives}
-    </article>
+    <>
+      <article className="flex flex-row flex-wrap justify-around">
+        {displayedArchives}
+      </article>
+      <div className="skills-QuoteContainer border-2 w-[360px] max-w-[90vw] p-2 mx-auto my-10 text-right">
+        <p className="text-lg underline">RoboQuote of the day:</p>
+        <p className="text-lg text-center my-2 italic">Your move, creep.</p>
+        <p className="text-sm w-[270px] max-w-[80vw]">
+          (Software engineer after implementing 50 new features to a 10 year old
+          program)
+        </p>
+      </div>
+    </>
   );
 }

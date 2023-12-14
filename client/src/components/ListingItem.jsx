@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { FaLink } from "react-icons/fa";
 import PropTypes from "prop-types";
 
 export default function ListingItem({ listing }) {
@@ -16,10 +15,6 @@ export default function ListingItem({ listing }) {
         />
         <div className="p-3 flex flex-col gap-2 w-full">
           <p className="truncate text-lg font-semibold ">{listing.name}</p>
-          <div className="flex items-center gap-1">
-            <FaLink className="h-4 w-4" />
-            <p className="text-sm truncate w-full">{listing.link}</p>
-          </div>
           <p className="text-sm line-clamp-2">{listing.description}</p>
           <p className="mt-2 font-semibold">
             {listing.offer

@@ -154,18 +154,20 @@ export default function Home() {
                 </SwiperSlide>
               ))}
           </Swiper>
-          <h2 className="text-center mt-4 text-2xl">Welcome to Prog City</h2>
-          <h3 className="text-center">(former Codetroit)</h3>
-          <p className="w-[80vw] mx-auto my-4 text-xl text-center">
-            Citizen, please familiarize yourself with our suggestions of the
-            resources that might help you become a potential robocoder. On
-            behalf of the AI department we wish you luck in getting better than
-            us. Thank you for your cooperation*.
-          </p>
+          <div className="home-listingsTextContainer border-b-2 pb-1">
+            <p className="w-[1000px] max-w-[95vw] mx-auto my-4 text-center">
+              Citizen, please familiarize yourself with our suggestions of the
+              resources that might help you become a potential robocoder. On
+              behalf of the AI department we wish you luck in getting better
+              than us. Thank you for your cooperation*.
+            </p>
+            <h2 className="text-right mr-2 italic">Prog City administration</h2>
+            <h3 className="text-right mr-2 italic">(former Codetroit)</h3>
+          </div>
           <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-6">
             {offerListings && offerListings.length > 0 && (
               <>
-                <div>
+                <div className="my-3">
                   <h2 className="text-2xl font-semibold">Recent offers</h2>
                   <Link
                     className="text-sm hover:underline"
@@ -224,7 +226,9 @@ export default function Home() {
           </div>
           <footer className="w-[80vw] mx-auto pb-2 text-xs text-center">
             *Please note we bear no responsibility over your chances of success
-            on the brave path of becoming a successful candidate.
+            on the brave path of becoming a successful candidate. We also have
+            no monetary interest in the provided resources and are not sponsored
+            by them.
           </footer>
         </div>
       )}

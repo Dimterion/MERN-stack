@@ -16,25 +16,33 @@ export default function About() {
         <nav className="flex items-center justify-between flex-wrap px-2 my-6">
           <ul className="about-ul uppercase flex gap-2 flex-wrap">
             <li
-              className={tab === "skills" ? "about-ulLiActive" : ""}
+              className={
+                tab === "skills" ? "about-ulLiActive" : "hover:opacity-80"
+              }
               onClick={() => setTab("skills")}
             >
               Skills
             </li>
             <li
-              className={tab === "objectives" ? "about-ulLiActive" : ""}
+              className={
+                tab === "objectives" ? "about-ulLiActive" : "hover:opacity-80"
+              }
               onClick={() => setTab("objectives")}
             >
               Objectives
             </li>
             <li
-              className={tab === "archives" ? "about-ulLiActive" : ""}
+              className={
+                tab === "archives" ? "about-ulLiActive" : "hover:opacity-80"
+              }
               onClick={() => setTab("archives")}
             >
               Archives
             </li>
             <li
-              className={tab === "profile" ? "about-ulLiActive" : ""}
+              className={
+                tab === "profile" ? "about-ulLiActive" : "hover:opacity-80"
+              }
               onClick={() => setTab("profile")}
             >
               Profile
