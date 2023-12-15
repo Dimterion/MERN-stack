@@ -65,7 +65,7 @@ export default function Home() {
   }, []);
 
   return content === "turnedOff" ? (
-    <section className="home-startBtnSection fixed top-0 right-0 bottom-0 left-0">
+    <section className="home-startBtnSection">
       <div className="home-startBtnWrap"></div>
       <button
         onClick={() => {

@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* General styling */
+/* General Styling */
 :root {
   /* Colors Variables */
   --primary: #081c15;
@@ -98,6 +98,11 @@ body {
 /* Home Page */
 .home-startBtnSection {
   background-color: var(--sub);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .home-startBtnWrap {
