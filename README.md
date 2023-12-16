@@ -12,5 +12,4 @@
 
 React, Redux, React Router, MongoDB, Express, Node.js, Tailwind CSS
 
-[Live Version](https://mern-stack-prod.onrender.com/)
-Takes a few minutes to load (subject to change).
+[Live Version](https://mern-stack-prod.onrender.com/) (takes a few minutes to load)

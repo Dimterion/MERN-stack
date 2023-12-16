@@ -101,9 +101,7 @@ export default function Home() {
           localStorage.setItem("content", "turnedOff");
           setContent("turnedOff");
         }}
-        className={`home-startBtn transition-transform active:scale-90 ${
-          content === "initial" && "active-btn"
-        }`}
+        className={`home-startBtn ${content === "initial" && "active-btn"}`}
       >
         <FaPowerOff />
       </button>
@@ -115,7 +113,7 @@ export default function Home() {
         <aside className="home-aside relative">
           <div className="home-verticalLine"></div>
           <div className="home-horizontalLine"></div>
-          <div className="home-asideInner flex flex-col items-start gap-4 py-20 px-3 w-[260px] max-w-[95vw] mx-auto my-40">
+          <div className="home-asideInner">
             <h1 className="font-bold text-3xl">
               Find your Prime <span style={{ color: "#2d6a4f" }}>coding</span>
               <br />

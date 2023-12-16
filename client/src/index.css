@@ -261,6 +261,14 @@ body {
 }
 
 .home-asideInner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  width: 260px;
+  max-width: 95vw;
+  padding: 5rem 0.75rem;
+  margin: 10rem auto;
   border: 3px solid rgba(116, 198, 157, 0.3);
   animation: home-asideInner 1s linear;
   background: rgba(0, 0, 0, 0.5);
@@ -325,6 +333,10 @@ body {
   padding: 4px;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
+}
+
+.home-startBtn:active {
+  scale: 0.9;
 }
 
 .home-subHeading {
