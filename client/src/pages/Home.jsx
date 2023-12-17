@@ -72,20 +72,20 @@ export default function Home() {
           setContent("initial");
           localStorage.setItem("content", "initial");
         }}
-        className="home-startBtn transition-transform active:scale-90"
+        className="home-startBtn"
       >
         <FaPowerOff />
       </button>{" "}
     </section>
   ) : content === "initial" ? (
-    <section className="home-startBtnSection fixed top-0 right-0 bottom-0 left-0">
+    <section className="home-startBtnSection">
       <div className="home-startBtnWrap">
         <h1>
           ROBO<span>CODE</span>
         </h1>
         <p>You must comply to proceed, citizen.</p>
-        <div className="home-complyBtnWrap relative">
-          <FaChevronRight className="home-chevron absolute -left-8" />
+        <div className="home-complyBtnWrap">
+          <FaChevronRight className="home-chevron" />
           <button
             onClick={() => {
               localStorage.setItem("content", "");
@@ -110,7 +110,7 @@ export default function Home() {
     <>
       <Header header={"header-header"} />
       {!showListings && (
-        <aside className="home-aside relative">
+        <aside className="home-aside">
           <div className="home-verticalLine"></div>
           <div className="home-horizontalLine"></div>
           <div className="home-asideInner">
@@ -134,8 +134,8 @@ export default function Home() {
         </aside>
       )}
       {showListings && (
-        <div className="home-listingsContainer pt-4">
-          <Swiper navigation className="swiper border-b-2 pb-4">
+        <div className="home-listingsContainer">
+          <Swiper navigation className="home-swiper">
             {offerListings &&
               offerListings.length > 0 &&
               offerListings.map((listing) => (
@@ -152,7 +152,7 @@ export default function Home() {
                 </SwiperSlide>
               ))}
           </Swiper>
-          <div className="home-listingsTextContainer border-b-2 pb-4">
+          <div className="home-listingsTextContainer">
             <p className="w-[1000px] max-w-[95vw] mx-auto py-4 text-center">
               Citizen, please familiarize yourself with our suggestions of the
               resources that might help you become a potential robocoder. On
