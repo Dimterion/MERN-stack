@@ -114,16 +114,16 @@ export default function Home() {
           <div className="home-verticalLine"></div>
           <div className="home-horizontalLine"></div>
           <div className="home-asideInner">
-            <h1 className="font-bold text-3xl">
+            <h2 className="font-bold text-3xl">
               Find your Prime <span style={{ color: "#2d6a4f" }}>coding</span>
               <br />
               Directives
-            </h1>
-            <div className="home-subHeading">
+            </h2>
+            <h3 className="home-subHeading">
               Dev or AI,
               <br />
               you{"'"}re coding with me
-            </div>
+            </h3>
             <button
               onClick={() => setShowListings(true)}
               className="font-bold hover:underline"
@@ -134,7 +134,7 @@ export default function Home() {
         </aside>
       )}
       {showListings && (
-        <div className="home-listingsContainer">
+        <section className="home-listingsContainer">
           <Swiper navigation className="home-swiper">
             {offerListings &&
               offerListings.length > 0 &&
@@ -159,8 +159,11 @@ export default function Home() {
               behalf of the AI department we wish you luck in getting better
               than us. Thank you for your cooperation*.
             </p>
-            <h2 className="text-center italic">Prog City administration</h2>
-            <h3 className="text-center italic">(former Codetroit)</h3>
+            <p className="text-center italic">
+              Prog City administration
+              <br />
+              (former Codetroit)
+            </p>
           </div>
           <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-6">
             {offerListings.length === 0 &&
@@ -225,13 +228,13 @@ export default function Home() {
               </>
             )}
           </div>
-          <footer className="w-[80vw] mx-auto pb-2 text-xs text-center">
+          <aside className="w-[80vw] mx-auto pb-2 text-xs text-center">
             *Please note we bear no responsibility over your chances of success
             on the brave path of becoming a successful candidate. We also have
             no monetary interest in the provided resources and are not sponsored
             by them.
-          </footer>
-        </div>
+          </aside>
+        </section>
       )}
     </>
   );
