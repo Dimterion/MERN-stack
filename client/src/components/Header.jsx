@@ -39,10 +39,7 @@ export default function Header({ header }) {
           <span style={{ color: "#2d6a4f" }}>CODE</span>
         </h1>
       </Link>
-      <form
-        onSubmit={handleSubmit}
-        className="header-form p-2 flex items-center"
-      >
+      <form onSubmit={handleSubmit} className="header-form">
         <input
           type="text"
           placeholder="Search..."
@@ -57,21 +54,21 @@ export default function Header({ header }) {
       <ul className="flex gap-3 mx-1 text-center items-center flex-wrap justify-around">
         <Link to="/profile">
           {currentUser ? (
-            <div className="header-userImg relative flex flex-row flex-wrap justify-center items-center mx-1 hover:opacity-80">
+            <li className="header-userImg">
               <img
                 className="h-4 w-4 object-cover"
                 src={currentUser.avatar}
                 alt="Profile image."
               />
-            </div>
+            </li>
           ) : (
-            <li className="header-li relative flex flex-row flex-wrap justify-center items-center mx-1 hover:opacity-80">
+            <li className="header-li">
               <FaCodeBranch />
             </li>
           )}
         </Link>
         <Link to="/about">
-          <li className="header-li relative flex flex-row flex-wrap justify-center items-center mx-1 hover:opacity-80">
+          <li className="header-li">
             <FaRegIdCard />
           </li>
         </Link>

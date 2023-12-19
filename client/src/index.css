@@ -37,10 +37,22 @@ body {
 .header-form {
   background-color: var(--additional);
   border: 3px solid var(--tertiary);
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
 .header-userImg {
   background: var(--tertiary);
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-userImg:hover {
+  opacity: 0.8;
 }
 
 .header-userImg::before {
@@ -67,6 +79,18 @@ body {
   border-right: 1px solid var(--secondary);
   border-bottom: 1px solid var(--secondary);
   border-left: 1px solid var(--secondary);
+}
+
+.header-li {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-li:hover {
+  opacity: 0.8;
 }
 
 .header-li::before {
