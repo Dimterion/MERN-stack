@@ -382,6 +382,9 @@ body {
 .listingItem-article {
   border: 1px solid var(--tertiary);
   background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  max-width: 330px;
 }
 
 /* Sign In Page */

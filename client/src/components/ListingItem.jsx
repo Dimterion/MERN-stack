@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function ListingItem({ listing }) {
   return (
-    <article className="listingItem-article overflow-hidden w-full sm:w-[330px]">
+    <article className="listingItem-article">
       <Link to={`/listing/${listing._id}`}>
         <img
           src={
