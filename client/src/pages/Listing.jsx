@@ -58,7 +58,7 @@ export default function Listing() {
   return (
     <>
       <Header />
-      <main className="signIn-section pt-12">
+      <main className="listing-main">
         {loading && <p className="text-center my-7 text-2xl">Loading...</p>}
         {error && (
           <p className="text-center my-7 text-2xl">Something went wrong.</p>
@@ -78,7 +78,7 @@ export default function Listing() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="listing-shareBtn absolute top-[0%] right-[1%] z-10 border w-6 h-6 flex justify-center items-center cursor-pointer">
+            <div className="listing-shareBtn">
               <FaLink
                 onClick={() => {
                   navigator.clipboard.writeText(window.location.href);
@@ -89,11 +89,7 @@ export default function Listing() {
                 }}
               />
             </div>
-            {copied && (
-              <p className="listing-shareBtn text-sm absolute top-[5%] right-[1%] z-10 p-1">
-                Link copied
-              </p>
-            )}
+            {copied && <p className="listing-shareBtnText">Link copied</p>}
             <div className="flex flex-col max-w-4xl mx-auto p-3 my-7 gap-4">
               <p className="text-2xl font-semibold">
                 {listing.name} -{" "}
@@ -109,13 +105,13 @@ export default function Listing() {
                 </a>
               </p>
               <div className="flex gap-4">
-                <p className="listing-type w-full max-w-[200px] text-center p-1">
+                <p className="listing-type">
                   {listing.type === "subscription"
                     ? "Subscription"
                     : "One-time purchase"}
                 </p>
                 {listing.offer && (
-                  <p className="listing-type w-full max-w-[200px] text-center p-1">
+                  <p className="listing-type">
                     {+listing.regularPrice - +listing.discountPrice}$ discount
                   </p>
                 )}
@@ -153,7 +149,7 @@ export default function Listing() {
                 !contact && (
                   <button
                     onClick={() => setContact(true)}
-                    className="listing-contactBtn uppercase hover:opacity-80 p-3 m-4"
+                    className="listing-contactBtn"
                   >
                     Contact poster
                   </button>

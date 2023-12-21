@@ -527,17 +527,53 @@ input[type="file"]::file-selector-button {
 }
 
 /* Listing Page */
+.listing-main {
+  border-top: 2px solid var(--secondary);
+  padding-top: 1rem;
+}
+
 .listing-shareBtn {
   background: var(--additional);
   border: 2px solid var(--secondary);
+  position: absolute;
+  top: 0%;
+  right: 1%;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.listing-shareBtnText {
+  background: var(--additional);
+  border: 2px solid var(--secondary);
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  z-index: 10;
+  padding: 1px;
+  font-size: 0.9rem;
 }
 
 .listing-type {
   background: var(--additional);
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  padding: 6px 0 4px;
 }
 
 .listing-contactBtn {
   background: var(--additional);
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin: 1rem;
+}
+
+.listing-contactBtn:hover {
+  opacity: 0.8;
 }
 
 /* Profile Page*/
