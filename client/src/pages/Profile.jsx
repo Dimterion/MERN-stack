@@ -181,12 +181,12 @@ export default function Profile() {
   return (
     <>
       <Header />
-      <section className="signIn-section">
+      <section className="profile-section">
         <div className="p-3 max-w-lg mx-auto">
           <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
           <form
             onSubmit={handleSubmit}
-            className="signIn-form flex flex-col gap-4"
+            className="profile-form flex flex-col gap-4"
           >
             <input
               onChange={(e) => setFile(e.target.files[0])}
@@ -199,7 +199,7 @@ export default function Profile() {
               onClick={() => fileRef.current.click()}
               src={formData.avatar || currentUser.avatar}
               alt="Profile image."
-              className="profile-img h-24 w-24 object-cover cursor-pointer self-center mt-2"
+              className="profile-img"
             />
             <pre className="text-center text-xs">
               Click on the image to update it
@@ -246,10 +246,7 @@ export default function Profile() {
             >
               {loading ? "Updating..." : "Update data"}
             </button>
-            <Link
-              className="profile-link p-3 uppercase text-center hover:opacity-80"
-              to="/create-listing"
-            >
+            <Link className="profile-link" to="/create-listing">
               Create listing
             </Link>
           </form>
@@ -286,10 +283,7 @@ export default function Profile() {
                 Your Listings
               </h1>
               {userListings.map((listing) => (
-                <div
-                  key={listing._id}
-                  className="profile-listingContainer border-2 p-3 flex justify-between items-center gap-4"
-                >
+                <div key={listing._id} className="profile-listingContainer">
                   <Link to={`/listing/${listing._id}`}>
                     <img
                       src={listing.imageUrls[0]}

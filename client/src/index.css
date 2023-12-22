@@ -409,12 +409,6 @@ body {
   text-decoration: underline;
 }
 
-.profile-link {
-  background-color: var(--primary);
-  border: 3px solid var(--secondary);
-  color: var(--secondary);
-}
-
 /* About Page */
 .about-section {
   border-top: 2px solid var(--secondary);
@@ -577,13 +571,52 @@ input[type="file"]::file-selector-button {
 }
 
 /* Profile Page*/
+.profile-section {
+  border-top: 2px solid var(--secondary);
+}
+
+.profile-form input,
+.profile-form textarea {
+  background-color: var(--additional);
+  border: 3px solid var(--tertiary);
+}
+
+.profile-form button {
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  color: var(--secondary);
+}
+
 .profile-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  margin: auto;
   border: 2px solid var(--secondary);
   background: var(--tertiary);
 }
 
+.profile-link {
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  color: var(--secondary);
+  text-transform: uppercase;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.profile-link:hover {
+  opacity: 0.8;
+}
+
 .profile-listingContainer {
-  border-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Contact Component */
