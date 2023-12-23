@@ -499,8 +499,13 @@ body {
 }
 
 /* Create Listing Page */
+.createListing-main {
+  border-top: 2px solid var(--secondary);
+}
+
 .createListing-checkbox {
   accent-color: var(--secondary);
+  width: 1.25rem;
   cursor: pointer;
 }
 
@@ -512,7 +517,11 @@ input[type="file"]::file-selector-button {
 }
 
 .createListing-imagesContainer {
-  border-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
 }
 
 /* Update Listing Page */

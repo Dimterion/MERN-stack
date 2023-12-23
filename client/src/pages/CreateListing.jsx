@@ -170,7 +170,7 @@ export default function CreateListing() {
   return (
     <>
       <Header />
-      <main className="signIn-section">
+      <main className="createListing-main">
         <section className="p-3 max-w-4xl mx-auto">
           <h1 className="text-3xl font-semibold text-center my-7">
             Create a listing
@@ -214,7 +214,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="oneTimePurchase"
-                    className="createListing-checkbox w-5"
+                    className="createListing-checkbox"
                     onChange={handleChange}
                     checked={formData.type === "oneTimePurchase"}
                   />
@@ -224,7 +224,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="subscription"
-                    className="createListing-checkbox w-5"
+                    className="createListing-checkbox"
                     onChange={handleChange}
                     checked={formData.type === "subscription"}
                   />
@@ -234,7 +234,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="certificate"
-                    className="createListing-checkbox w-5"
+                    className="createListing-checkbox"
                     onChange={handleChange}
                     checked={formData.certificate}
                   />
@@ -244,7 +244,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="community"
-                    className="createListing-checkbox w-5"
+                    className="createListing-checkbox"
                     onChange={handleChange}
                     checked={formData.community}
                   />
@@ -254,7 +254,7 @@ export default function CreateListing() {
                   <input
                     type="checkbox"
                     id="offer"
-                    className="createListing-checkbox w-5"
+                    className="createListing-checkbox"
                     onChange={handleChange}
                     checked={formData.offer}
                   />
@@ -342,7 +342,7 @@ export default function CreateListing() {
               <div className="flex gap-4">
                 <input
                   onChange={(e) => setFiles(e.target.files)}
-                  className="createListing-chooseFilesContainer p-3 w-full"
+                  className="p-3 w-full"
                   type="file"
                   id="images"
                   accept="image/*"
@@ -360,10 +360,7 @@ export default function CreateListing() {
               <p className="text-sm">{imageUploadError && imageUploadError}</p>
               {formData.imageUrls.length > 0 &&
                 formData.imageUrls.map((url, index) => (
-                  <div
-                    key={url}
-                    className="createListing-imagesContainer flex justify-between p-3 border-2 items-center"
-                  >
+                  <div key={url} className="createListing-imagesContainer">
                     <img
                       src={url}
                       alt="Listing image."
