@@ -503,6 +503,24 @@ body {
   border-top: 2px solid var(--secondary);
 }
 
+.createListing-form {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.createListing-form input,
+.createListing-form textarea {
+  background-color: var(--additional);
+  border: 3px solid var(--tertiary);
+}
+
+.createListing-form button {
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  color: var(--secondary);
+}
+
 .createListing-checkbox {
   accent-color: var(--secondary);
   width: 1.25rem;
@@ -525,6 +543,34 @@ input[type="file"]::file-selector-button {
 }
 
 /* Update Listing Page */
+.updateListing-main {
+  border-top: 2px solid var(--secondary);
+}
+
+.updateListing-form {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.updateListing-form input,
+.updateListing-form textarea {
+  background-color: var(--additional);
+  border: 3px solid var(--tertiary);
+}
+
+.updateListing-form button {
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.updateListing-checkbox {
+  accent-color: var(--secondary);
+  width: 1.25rem;
+  cursor: pointer;
+}
+
 .updateListing-imgContainer {
   border-color: var(--secondary);
 }

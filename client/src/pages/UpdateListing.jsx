@@ -189,15 +189,12 @@ export default function UpdateListing() {
   return (
     <>
       <Header />
-      <main className="signIn-section">
+      <main className="updateListing-main">
         <section className="p-3 max-w-4xl mx-auto">
           <h1 className="text-3xl font-semibold text-center my-7">
             Update listing
           </h1>
-          <form
-            onSubmit={handleSubmit}
-            className="signIn-form flex flex-col sm:flex-row gap-4"
-          >
+          <form onSubmit={handleSubmit} className="updateListing-form">
             <div className="flex flex-col gap-4 flex-1">
               <input
                 type="text"
@@ -233,7 +230,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="oneTimePurchase"
-                    className="createListing-checkbox w-5"
+                    className="updateListing-checkbox"
                     onChange={handleChange}
                     checked={formData.type === "oneTimePurchase"}
                   />
@@ -243,7 +240,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="subscription"
-                    className="createListing-checkbox w-5"
+                    className="updateListing-checkbox"
                     onChange={handleChange}
                     checked={formData.type === "subscription"}
                   />
@@ -253,7 +250,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="certificate"
-                    className="createListing-checkbox w-5"
+                    className="updateListing-checkbox"
                     onChange={handleChange}
                     checked={formData.certificate}
                   />
@@ -263,7 +260,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="community"
-                    className="createListing-checkbox w-5"
+                    className="updateListing-checkbox"
                     onChange={handleChange}
                     checked={formData.community}
                   />
@@ -273,7 +270,7 @@ export default function UpdateListing() {
                   <input
                     type="checkbox"
                     id="offer"
-                    className="createListing-checkbox w-5"
+                    className="updateListing-checkbox"
                     onChange={handleChange}
                     checked={formData.offer}
                   />

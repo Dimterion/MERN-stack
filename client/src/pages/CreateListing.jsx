@@ -175,10 +175,7 @@ export default function CreateListing() {
           <h1 className="text-3xl font-semibold text-center my-7">
             Create a listing
           </h1>
-          <form
-            onSubmit={handleSubmit}
-            className="signIn-form flex flex-col sm:flex-row gap-4"
-          >
+          <form onSubmit={handleSubmit} className="createListing-form">
             <div className="flex flex-col gap-4 flex-1">
               <input
                 type="text"
