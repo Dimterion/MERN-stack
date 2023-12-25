@@ -392,6 +392,12 @@ body {
   border-top: 2px solid var(--secondary);
 }
 
+.signIn-form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
 .signIn-form input,
 .signIn-form textarea {
   background-color: var(--additional);
@@ -405,6 +411,34 @@ body {
 }
 
 .signIn-signUpLink {
+  color: var(--tertiary);
+  text-decoration: underline;
+}
+
+/* Sign Up Page */
+.signUp-section {
+  border-top: 2px solid var(--secondary);
+}
+
+.signUp-form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
+.signUp-form input,
+.signUp-form textarea {
+  background-color: var(--additional);
+  border: 3px solid var(--tertiary);
+}
+
+.signUp-form button {
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.signUp-signInLink {
   color: var(--tertiary);
   text-decoration: underline;
 }

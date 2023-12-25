@@ -53,7 +53,7 @@ export default function SignUp() {
   return (
     <>
       <Header />
-      <section className="signIn-section">
+      <section className="signUp-section">
         <div className="p-3 max-w-lg mx-auto">
           <h1 className="text-3xl text-center font-semibold my-7">
             There{"'"}s a new coder in town
@@ -61,7 +61,7 @@ export default function SignUp() {
           <h2 className="text-center my-4">You have three fields to comply</h2>
           <form
             onSubmit={handleSubmit}
-            className="signIn-form flex flex-col gap-4"
+            className="signUp-form flex flex-col gap-4"
           >
             <input
               type="text"
@@ -95,7 +95,7 @@ export default function SignUp() {
           <div className="flex gap-2 mt-5">
             <p>Already registered?</p>
             <Link to="/sign-in">
-              <span className="signIn-signUpLink">Proceed here.</span>
+              <span className="signUp-signInLink">Proceed here.</span>
             </Link>
           </div>
           {error && <p className="mt-5">{error}</p>}

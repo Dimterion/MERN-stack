@@ -60,10 +60,7 @@ export default function SignIn() {
             Please write down your login
           </h1>
           <h2 className="text-center my-4">You have two fields to comply</h2>
-          <form
-            onSubmit={handleSubmit}
-            className="signIn-form flex flex-col gap-4"
-          >
+          <form onSubmit={handleSubmit} className="signIn-form">
             <input
               type="email"
               placeholder="Email"
