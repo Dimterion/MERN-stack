@@ -143,13 +143,10 @@ export default function Search() {
   return (
     <>
       <Header />
-      <section className="signIn-section">
+      <section className="search-section">
         <div className="flex flex-col md:flex-row">
-          <div className="search-sectionInnerDiv p-7 border-b-2 md:border-r-2 md:min-h-screen md:max-w-md">
-            <form
-              onSubmit={handleSubmit}
-              className="signIn-form flex flex-col gap-8"
-            >
+          <div className="search-sectionInnerDiv">
+            <form onSubmit={handleSubmit} className="search-form">
               <div className="flex items-center gap-2">
                 <label className="whitespace-nowrap font-semibold uppercase">
                   Search:
@@ -169,7 +166,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="all"
-                    className="search-checkbox w-5"
+                    className="search-checkbox"
                     onChange={handleChange}
                     checked={sidebarData.type === "all"}
                   />
@@ -179,7 +176,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="subscription"
-                    className="search-checkbox w-5"
+                    className="search-checkbox"
                     onChange={handleChange}
                     checked={sidebarData.type === "subscription"}
                   />
@@ -189,7 +186,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="oneTimePurchase"
-                    className="search-checkbox w-5"
+                    className="search-checkbox"
                     onChange={handleChange}
                     checked={sidebarData.type === "oneTimePurchase"}
                   />
@@ -199,7 +196,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="offer"
-                    className="search-checkbox w-5"
+                    className="search-checkbox"
                     onChange={handleChange}
                     checked={sidebarData.offer}
                   />
@@ -212,7 +209,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="certificate"
-                    className="search-checkbox w-5"
+                    className="search-checkbox"
                     onChange={handleChange}
                     checked={sidebarData.certificate}
                   />
@@ -222,7 +219,7 @@ export default function Search() {
                   <input
                     type="checkbox"
                     id="community"
-                    className="search-checkbox w-5"
+                    className="search-checkbox"
                     onChange={handleChange}
                     checked={sidebarData.community}
                   />
@@ -235,7 +232,7 @@ export default function Search() {
                   onChange={handleChange}
                   defaultValue={"created_at_desc"}
                   id="sort_order"
-                  className="search-select border p-1 cursor-pointer"
+                  className="search-select"
                 >
                   <option value="regularPrice_desc">Price - decreasing</option>
                   <option value="regularPrice_asc">Price - increasing</option>
@@ -247,15 +244,13 @@ export default function Search() {
             </form>
           </div>
           <div className="flex-1">
-            <h1 className="search-hOne text-3xl font-semibold border-b-2 p-3">
-              Results
-            </h1>
+            <h1 className="search-hOne">Results</h1>
             <div className="p-7 flex flex-wrap gap-4">
               {!loading && listings.length === 0 && (
                 <p className="text-xl">No listings found.</p>
               )}
               {loading && (
-                <p className="text-xltext-center w-full">Loading...</p>
+                <p className="text-xl text-center w-full">Loading...</p>
               )}
               {!loading &&
                 listings &&
