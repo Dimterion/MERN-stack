@@ -41,11 +41,11 @@ export default function Contact({ listing }) {
             value={message}
             onChange={onChange}
             placeholder="Enter your message here."
-            className="contact-textarea w-full border-2 p-3 focus:outline-none"
+            className="contact-textarea"
           ></textarea>
           <Link
             to={`mailto:${poster.email}?subject=Regarding ${listing.name}&body=${message}`}
-            className="contact-sendBtn text-center p-3 uppercase hover:opacity-80 m-4"
+            className="contact-sendBtn"
           >
             Send message
           </Link>

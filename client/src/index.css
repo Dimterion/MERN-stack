@@ -754,7 +754,21 @@ input[type="file"]::file-selector-button {
 
 /* Contact Component */
 .contact-textarea {
-  border-color: var(--tertiary);
+  border: 2px solid var(--tertiary);
+  width: 100%;
+  padding: 0.75rem;
+  outline: none;
+}
+
+.contact-sendBtn {
+  text-align: center;
+  padding: 0.75rem;
+  text-transform: uppercase;
+  margin: 0.75rem;
+}
+
+.contact-sendBtn:hover {
+  opacity: 0.8;
 }
 
 .contact-sendBtn,
