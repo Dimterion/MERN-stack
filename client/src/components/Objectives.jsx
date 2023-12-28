@@ -62,7 +62,7 @@ export default function Objectives() {
           </fieldset>
         </div>
       </article>
-      <div className="skills-QuoteContainer border-2 w-[360px] max-w-[90vw] p-2 mx-auto my-10 text-right">
+      <div className="quote-container">
         <p className="text-lg underline">
           A special message for all the devs working from home:
         </p>

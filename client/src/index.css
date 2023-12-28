@@ -781,8 +781,13 @@ input[type="file"]::file-selector-button {
   border-color: var(--secondary);
 }
 
-.skills-QuoteContainer {
-  border-color: var(--secondary);
+.quote-container {
+  border: 2px solid var(--secondary);
+  width: 360px;
+  max-width: 90vw;
+  padding: 0.5rem;
+  margin: 5rem auto;
+  text-align: end;
 }
 
 /* Objectives Component */
@@ -944,5 +949,9 @@ li {
 
 /* Archives Component */
 .archives-article {
-  border-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  text-align: center;
+  padding-bottom: 0.75rem;
+  margin: 0.75rem 0;
+  overflow: hidden;
 }

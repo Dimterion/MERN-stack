@@ -121,7 +121,7 @@ export default function Skills({ skillName, setSkillName }) {
         <FaAngleDown />
       </h2>
       {displayedSkills}
-      <div className="skills-QuoteContainer border-2 w-[360px] max-w-[90vw] p-2 mx-auto my-10 text-right">
+      <div className="quote-container">
         <p className="text-lg underline">RoboQuote of the day:</p>
         <p className="text-lg text-center my-2 italic">
           I{"'"}ll fix you. I fix everything.
