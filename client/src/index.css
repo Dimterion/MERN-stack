@@ -910,7 +910,9 @@ li {
 .profile-article {
   max-width: 600px;
   margin: auto;
-  border-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .profile-article > div {
@@ -938,6 +940,8 @@ li {
 
 .profile-articleHeadingOne {
   animation: profile-articleHeading 4s linear;
+  margin: 0.5rem;
+  font-size: 2.25rem;
 }
 
 @keyframes profile-articleHeading {
@@ -955,18 +959,28 @@ li {
 }
 
 .profile-articleHeadingTwo {
+  margin: 0.25rem;
+  font-size: 1.5rem;
   animation: profile-articleHeading 6s linear;
 }
 
 .profile-articleHeadingThree {
+  margin: 0.25rem;
+  font-size: 1.25rem;
   animation: profile-articleHeading 8s linear;
 }
 
 .profile-articleParagraph {
+  margin: 0.25rem;
+  text-align: start;
+  padding: 0 2.5rem;
   animation: profile-articleHeading 12s linear;
 }
 
 .profile-articleDiv {
+  text-align: start;
+  margin: 0.5rem 0;
+  padding: 0 3rem;
   animation: profile-articleHeading 14s linear;
 }
 
