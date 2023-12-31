@@ -489,6 +489,10 @@ body {
   width: 35px;
   height: 35px;
   border: 2px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-cubeActive {
@@ -497,9 +501,39 @@ body {
   background: var(--secondary);
   color: var(--primary);
   border: 2px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-cubes {
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-cubesActive {
+  width: 35px;
+  height: 35px;
+  background: var(--secondary);
+  color: var(--primary);
+  border: 2px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-skill {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25rem;
+  justify-content: space-between;
   border: 2px solid transparent;
   padding: 10px;
   cursor: pointer;
@@ -510,6 +544,7 @@ body {
 }
 
 .about-skillName {
+  text-transform: uppercase;
   border: 2px solid var(--secondary);
   width: 150px;
   text-align: center;
@@ -777,6 +812,23 @@ input[type="file"]::file-selector-button {
 }
 
 /* Skills Component */
+.skills-article {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.25rem;
+}
+
+.skills-articleActive {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--secondary);
+  margin: 0.25rem;
+}
+
 .skills-active {
   border-color: var(--secondary);
 }

@@ -8,8 +8,8 @@ export default function Skills({ skillName, setSkillName }) {
       <article
         className={
           skillName === skill.name && skill.name !== ""
-            ? "skills-active flex flex-row flex-wrap items-center justify-between border-2 m-1 md:m-2"
-            : "flex flex-row flex-wrap items-center justify-between m-1 md:m-2"
+            ? "skills-articleActive"
+            : "skills-article"
         }
         key={skill.id}
       >
@@ -20,34 +20,28 @@ export default function Skills({ skillName, setSkillName }) {
                 ? setSkillName("")
                 : setSkillName(skill.name);
             }}
-            className="about-skill flex gap-1 flex-wrap justify-between"
+            className="about-skill"
           >
-            <div className="about-skillName uppercase">{skill.name}</div>
+            <div className="about-skillName">{skill.name}</div>
             <div className="flex gap-1 md:gap-2">
               <div
                 className={skill.level > 0 ? "about-cubeActive" : "about-cube"}
               ></div>
               <div
                 className={
-                  skill.level > 1
-                    ? "about-cubeActive flex flex-col items-center justify-center"
-                    : "about-cube flex flex-col items-center justify-center"
+                  skill.level > 1 ? "about-cubesActive" : "about-cubes"
                 }
               >
                 <FaAngleUp />
               </div>
               <div
                 className={
-                  skill.level > 2
-                    ? "about-cubeActive flex flex-col items-center justify-center"
-                    : "about-cube flex flex-col items-center justify-center"
+                  skill.level > 2 ? "about-cubesActive" : "about-cubes"
                 }
               ></div>
               <div
                 className={
-                  skill.level > 3
-                    ? "about-cubeActive flex flex-col items-center justify-center"
-                    : "about-cube flex flex-col items-center justify-center"
+                  skill.level > 3 ? "about-cubesActive" : "about-cubes"
                 }
               >
                 <FaAngleUp />
@@ -55,16 +49,12 @@ export default function Skills({ skillName, setSkillName }) {
               </div>
               <div
                 className={
-                  skill.level > 4
-                    ? "about-cubeActive flex flex-col items-center justify-center"
-                    : "about-cube flex flex-col items-center justify-center"
+                  skill.level > 4 ? "about-cubesActive" : "about-cubes"
                 }
               ></div>
               <div
                 className={
-                  skill.level > 5
-                    ? "about-cubeActive flex flex-col items-center justify-center"
-                    : "about-cube flex flex-col items-center justify-center"
+                  skill.level > 5 ? "about-cubesActive" : "about-cubes"
                 }
               >
                 <FaAngleUp />
@@ -77,7 +67,7 @@ export default function Skills({ skillName, setSkillName }) {
         {skillName === skill.name && skill.name !== "" && (
           <div className="w-2/4 ml-2">
             <div className="flex flex-wrap gap-2 my-2 items-center">
-              <div className="about-cubeActive flex flex-col items-center justify-center">
+              <div className="about-cubeActive">
                 <FaAngleUp />
               </div>
               <div className="w-80">
@@ -86,7 +76,7 @@ export default function Skills({ skillName, setSkillName }) {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 my-2 items-center">
-              <div className="about-cubeActive flex flex-col items-center justify-center">
+              <div className="about-cubeActive">
                 <FaAngleUp />
                 <FaAngleUp />
               </div>
@@ -96,7 +86,7 @@ export default function Skills({ skillName, setSkillName }) {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 my-2 items-center">
-              <div className="about-cubeActive flex flex-col items-center justify-center">
+              <div className="about-cubeActive">
                 <FaAngleUp />
                 <FaAngleUp />
                 <FaAngleUp />
