@@ -1,5 +1,5 @@
-# MERN-stack - Backend
+# MERN-stack - Back-End
 
-- Setting up controllers, models and routes.
-- Adding error handler.
-- Creating verification token.
+- Set up controllers, models and routes.
+- Added error handler.
+- Created verification token.

@@ -1,5 +1,6 @@
-# MERN-stack - Frontend
+# MERN-stack - Front-End
 
-- Setting up public and private routes.
-- Implementing Redux store and user slice.
-- Creating pages/components for the application (+ adjusting Tailwind & CSS styling).
+- Set up public and private routes.
+- Implemented Redux store and user slice.
+- Created pages and components for the application.
+- Adjusted Tailwind and CSS styles.
