@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Skills from "../components/Skills";
 import Objectives from "../components/Objectives";
 import Archives from "../components/Archives";
-import Profile from "../components/Profile";
+import Overview from "../components/Overview";
 
 export default function About() {
   const [tab, setTab] = useState("skills");
@@ -41,11 +41,11 @@ export default function About() {
             </li>
             <li
               className={
-                tab === "profile" ? "about-ulLiActive" : "hover:opacity-80"
+                tab === "overview" ? "about-ulLiActive" : "hover:opacity-80"
               }
-              onClick={() => setTab("profile")}
+              onClick={() => setTab("overview")}
             >
-              Profile
+              Overview
             </li>
           </ul>
           <div>9,001 / 10,000 XP</div>
@@ -56,7 +56,7 @@ export default function About() {
           )}
           {tab === "objectives" && <Objectives />}
           {tab === "archives" && <Archives />}
-          {tab === "profile" && <Profile />}
+          {tab === "overview" && <Overview />}
         </section>
       </section>
     </>

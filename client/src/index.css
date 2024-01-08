@@ -958,8 +958,8 @@ li {
   background: var(--secondary);
 }
 
-/* Profile Component */
-.profile-article {
+/* Overview Component */
+.overview-article {
   max-width: 600px;
   margin: auto;
   border: 2px solid var(--secondary);
@@ -967,20 +967,20 @@ li {
   padding: 0.5rem;
 }
 
-.profile-article > div {
+.overview-article > div {
   border-color: var(--secondary);
 }
 
-.profile-articleImg {
+.overview-articleImg {
   max-width: 85vw;
   max-height: 50vh;
   object-fit: cover;
   margin: auto;
   border: 2px solid var(--secondary);
-  animation: profile-articleImg 2s linear;
+  animation: overview-articleImg 2s linear;
 }
 
-@keyframes profile-articleImg {
+@keyframes overview-articleImg {
   from {
     opacity: 0;
   }
@@ -990,13 +990,13 @@ li {
   }
 }
 
-.profile-articleHeadingOne {
-  animation: profile-articleHeading 4s linear;
+.overview-articleHeadingOne {
+  animation: overview-articleHeading 4s linear;
   margin: 0.5rem;
   font-size: 2.25rem;
 }
 
-@keyframes profile-articleHeading {
+@keyframes overview-articleHeading {
   0% {
     opacity: 0;
   }
@@ -1010,33 +1010,33 @@ li {
   }
 }
 
-.profile-articleHeadingTwo {
+.overview-articleHeadingTwo {
   margin: 0.25rem;
   font-size: 1.5rem;
-  animation: profile-articleHeading 6s linear;
+  animation: overview-articleHeading 6s linear;
 }
 
-.profile-articleHeadingThree {
+.overview-articleHeadingThree {
   margin: 0.25rem;
   font-size: 1.25rem;
-  animation: profile-articleHeading 8s linear;
+  animation: overview-articleHeading 8s linear;
 }
 
-.profile-articleParagraph {
+.overview-articleParagraph {
   margin: 0.25rem;
   text-align: start;
   padding: 0 2.5rem;
-  animation: profile-articleHeading 12s linear;
+  animation: overview-articleHeading 12s linear;
 }
 
-.profile-articleDiv {
+.overview-articleDiv {
   text-align: start;
   margin: 0.5rem 0;
   padding: 0 3rem;
-  animation: profile-articleHeading 14s linear;
+  animation: overview-articleHeading 14s linear;
 }
 
-.profile-articleSpan {
+.overview-articleSpan {
   text-decoration: line-through;
 }
 
