@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: var(--primary);
+  background: var(--primary);
   color: var(--secondary);
   font-family: "Kdam Thmor Pro", sans-serif;
 }
@@ -35,20 +35,20 @@ body {
 }
 
 .header-form {
-  background-color: var(--additional);
-  border: 3px solid var(--tertiary);
   display: flex;
   align-items: center;
   padding: 10px;
+  border: 3px solid var(--tertiary);
+  background: var(--additional);
 }
 
 .header-userImg {
-  background: var(--tertiary);
   position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  background: var(--tertiary);
 }
 
 .header-userImg:hover {
@@ -61,8 +61,8 @@ body {
   top: -0.25rem;
   left: -0.25rem;
   width: calc(100% + 0.5rem);
-  height: 5px;
   max-width: 95vw;
+  height: 5px;
   border-top: 1px solid var(--secondary);
   border-right: 1px solid var(--secondary);
   border-left: 1px solid var(--secondary);
@@ -74,8 +74,8 @@ body {
   right: -0.25rem;
   bottom: -0.25rem;
   width: calc(100% + 0.5rem);
-  height: 5px;
   max-width: 95vw;
+  height: 5px;
   border-right: 1px solid var(--secondary);
   border-bottom: 1px solid var(--secondary);
   border-left: 1px solid var(--secondary);
@@ -99,8 +99,8 @@ body {
   top: -0.25rem;
   left: -0.25rem;
   width: calc(100% + 0.5rem);
-  height: 5px;
   max-width: 95vw;
+  height: 5px;
   border-top: 1px solid var(--secondary);
   border-right: 1px solid var(--secondary);
   border-left: 1px solid var(--secondary);
@@ -112,8 +112,8 @@ body {
   right: -0.25rem;
   bottom: -0.25rem;
   width: calc(100% + 0.5rem);
-  height: 5px;
   max-width: 95vw;
+  height: 5px;
   border-right: 1px solid var(--secondary);
   border-bottom: 1px solid var(--secondary);
   border-left: 1px solid var(--secondary);
@@ -121,12 +121,12 @@ body {
 
 /* Home Page */
 .home-startBtnSection {
-  background-color: var(--sub);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background: var(--sub);
 }
 
 .home-startBtnWrap {
@@ -137,25 +137,25 @@ body {
   left: 0;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   overflow: auto;
   border: 1.5rem solid var(--sub);
-  background-color: var(--primary);
   border-radius: 15%;
+  background: var(--primary);
+  text-align: center;
 }
 
 .home-startBtnWrap h1 {
-  font-size: 4rem;
-  animation: typingHeading 2s steps(8);
-  white-space: nowrap;
   overflow: hidden;
   width: 347px;
   max-width: 75vw;
+  font-size: 4rem;
+  white-space: nowrap;
+  animation: heading-typing 2s steps(8);
 }
 
-@keyframes typingHeading {
+@keyframes heading-typing {
   from {
     width: 0;
   }
