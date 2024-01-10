@@ -152,10 +152,10 @@ body {
   max-width: 75vw;
   font-size: 4rem;
   white-space: nowrap;
-  animation: heading-typing 2s steps(8);
+  animation: home-headingTyping 2s steps(8);
 }
 
-@keyframes heading-typing {
+@keyframes home-headingTyping {
   from {
     width: 0;
   }
@@ -172,15 +172,15 @@ body {
 }
 
 .home-startBtnWrap p {
-  font-size: 2rem;
-  animation: 4s typingParagraph 2s steps(35) both;
+  overflow: hidden;
   width: 620px;
   max-width: 75vw;
+  font-size: 2rem;
   white-space: nowrap;
-  overflow: hidden;
+  animation: 4s home-paragraphTyping 2s steps(35) both;
 }
 
-@keyframes typingParagraph {
+@keyframes home-paragraphTyping {
   from {
     width: 0;
   }
@@ -194,32 +194,33 @@ body {
 
 .home-complyBtnWrap {
   position: relative;
-  margin-top: 2rem;
-  font-size: 2rem;
-  animation: 1s btnAppear 6s both;
+  display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  animation: 1s home-complyBtnAppear 6s both;
 }
 
-@keyframes btnAppear {
+@keyframes home-complyBtnAppear {
   from {
     display: none;
     opacity: 0;
   }
 
   to {
-    opacity: 1;
     display: flex;
+    opacity: 1;
   }
 }
 
 .home-complyBtnWrap button {
-  border: 2px solid var(--secondary);
   width: 200px;
   max-width: 50vw;
   padding: 5px 15px 3.5px;
-  text-transform: uppercase;
+  border: 2px solid var(--secondary);
   font-size: 1.25rem;
+  text-transform: uppercase;
   transition: 0.5s;
 }
 
@@ -236,10 +237,10 @@ body {
 .home-chevron {
   position: absolute;
   left: -2rem;
-  animation: 1.5s home-chevron infinite ease-in-out;
+  animation: 1.5s home-chevronBlink infinite ease-in-out;
 }
 
-@keyframes home-chevron {
+@keyframes home-chevronBlink {
   0% {
     opacity: 0;
   }
