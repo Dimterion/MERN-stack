@@ -261,25 +261,25 @@ body {
 
 .home-verticalLine {
   position: absolute;
+  left: 50%;
+  opacity: 0.1;
   width: 2px;
   height: 100%;
   background: var(--secondary);
-  left: 50%;
-  opacity: 0.1;
-  animation: 0.2s home-line 0.8s linear;
+  animation: 0.2s home-lineHighlight 0.8s linear;
 }
 
 .home-horizontalLine {
   position: absolute;
+  top: 50%;
+  opacity: 0.1;
   width: 100%;
   height: 2px;
   background: var(--secondary);
-  top: 50%;
-  opacity: 0.1;
-  animation: 0.2s home-line 0.8s linear;
+  animation: 0.2s home-lineHighlight 0.8s linear;
 }
 
-@keyframes home-line {
+@keyframes home-lineHighlight {
   0% {
     opacity: 1;
   }
@@ -291,19 +291,19 @@ body {
 
 .home-asideInner {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   align-items: flex-start;
   gap: 1rem;
   width: 260px;
   max-width: 95vw;
   padding: 5rem 0.75rem;
-  margin: 10rem auto;
   border: 3px solid rgba(116, 198, 157, 0.3);
-  animation: home-asideInner 1s linear;
+  margin: 10rem auto;
   background: rgba(0, 0, 0, 0.5);
+  animation: home-asideInnerShrink 1s linear;
 }
 
-@keyframes home-asideInner {
+@keyframes home-asideInnerShrink {
   0% {
     padding: 8rem 0.75rem;
     border: 3px solid rgba(116, 198, 157, 0.3);
@@ -326,10 +326,10 @@ body {
 .home-listingsContainer {
   padding-top: 1rem;
   border-top: 2px solid var(--secondary);
-  animation: home-listingsContainer 1.5s ease-in-out;
+  animation: home-listingsContainerAppear 1.5s ease-in-out;
 }
 
-@keyframes home-listingsContainer {
+@keyframes home-listingsContainerAppear {
   0% {
     opacity: 0;
   }
@@ -340,8 +340,8 @@ body {
 }
 
 .home-swiper {
-  border-bottom: 2px solid var(--secondary);
   padding-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary);
 }
 
 .swiper-button-prev,
@@ -350,21 +350,21 @@ body {
 }
 
 .home-listingsTextContainer {
-  border-bottom: 2px solid var(--secondary);
   padding-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary);
   background: rgba(0, 0, 0, 0.5);
 }
 
 .home-startBtn {
   position: absolute;
-  bottom: 0;
   right: 0;
-  margin: 2.5px;
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  bottom: 0;
   padding: 4px;
-  cursor: pointer;
+  border: 2px solid var(--primary);
+  margin: 2.5px;
   background: rgba(0, 0, 0, 0.5);
+  color: var(--primary);
+  cursor: pointer;
 }
 
 .home-startBtn:active {
