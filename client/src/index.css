@@ -381,11 +381,11 @@ body {
 
 /* Listing Item Component */
 .listingItem-article {
-  border: 1px solid var(--tertiary);
-  background: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   width: 100%;
   max-width: 330px;
+  border: 1px solid var(--tertiary);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* Sign In Page */
@@ -401,13 +401,13 @@ body {
 
 .signIn-form input,
 .signIn-form textarea {
-  background-color: var(--additional);
   border: 3px solid var(--tertiary);
+  background: var(--additional);
 }
 
 .signIn-form button {
-  background-color: var(--primary);
   border: 3px solid var(--secondary);
+  background: var(--primary);
   color: var(--secondary);
 }
 
@@ -429,13 +429,13 @@ body {
 
 .signUp-form input,
 .signUp-form textarea {
-  background-color: var(--additional);
   border: 3px solid var(--tertiary);
+  background: var(--additional);
 }
 
 .signUp-form button {
-  background-color: var(--primary);
   border: 3px solid var(--secondary);
+  background: var(--primary);
   color: var(--secondary);
 }
 
@@ -455,9 +455,9 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  width: 150px;
   margin: 0.5rem;
   cursor: pointer;
-  width: 150px;
 }
 
 .about-ul li::after {
@@ -466,8 +466,8 @@ body {
   right: -0.25rem;
   bottom: -0.1rem;
   width: calc(100% + 0.5rem);
-  height: 5px;
   max-width: 95vw;
+  height: 5px;
   border-right: 2px solid var(--secondary);
   border-bottom: 2px solid var(--secondary);
   border-left: 2px solid var(--secondary);
@@ -479,64 +479,64 @@ body {
   top: -0.25rem;
   left: -0.25rem;
   width: calc(100% + 0.5rem);
-  height: 25px;
   max-width: 95vw;
+  height: 25px;
   border-top: 2px solid var(--secondary);
   border-right: 2px solid var(--secondary);
   border-left: 2px solid var(--secondary);
 }
 
 .about-cube {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 35px;
   height: 35px;
   border: 2px solid var(--secondary);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-cubeActive {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 35px;
   height: 35px;
+  border: 2px solid var(--secondary);
   background: var(--secondary);
   color: var(--primary);
-  border: 2px solid var(--secondary);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-cubes {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 35px;
   height: 35px;
   border: 2px solid var(--secondary);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-cubesActive {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 35px;
   height: 35px;
+  border: 2px solid var(--secondary);
   background: var(--secondary);
   color: var(--primary);
-  border: 2px solid var(--secondary);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-skill {
   display: flex;
   flex-flow: row wrap;
-  gap: 0.25rem;
   justify-content: space-between;
-  border: 2px solid transparent;
+  gap: 0.25rem;
   padding: 10px;
+  border: 2px solid transparent;
   cursor: pointer;
 }
 
@@ -545,11 +545,11 @@ body {
 }
 
 .about-skillName {
-  text-transform: uppercase;
-  border: 2px solid var(--secondary);
   width: 150px;
-  text-align: center;
   padding: 5px 10px 4px;
+  border: 2px solid var(--secondary);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Search Page */
