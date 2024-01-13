@@ -558,16 +558,16 @@ body {
 }
 
 .search-select {
-  background: var(--additional);
-  border: 2px solid var(--tertiary);
-  cursor: pointer;
   padding: 0.25rem;
+  border: 2px solid var(--tertiary);
+  background: var(--additional);
+  cursor: pointer;
 }
 
 .search-checkbox {
+  width: 1.25rem;
   accent-color: var(--secondary);
   cursor: pointer;
-  width: 1.25rem;
 }
 
 .search-sectionInnerDiv {
@@ -577,9 +577,9 @@ body {
 
 @media (min-width: 768px) {
   .search-sectionInnerDiv {
-    border-right: 2px solid var(--tertiary);
-    min-height: 100vh;
     max-width: 28rem;
+    min-height: 100vh;
+    border-right: 2px solid var(--tertiary);
   }
 }
 
@@ -590,21 +590,21 @@ body {
 }
 
 .search-form input {
-  background-color: var(--additional);
   border: 3px solid var(--tertiary);
+  background: var(--additional);
 }
 
 .search-form button {
-  background-color: var(--primary);
   border: 3px solid var(--secondary);
+  background: var(--primary);
   color: var(--secondary);
 }
 
 .search-hOne {
+  padding: 0.75rem;
+  border-bottom: 2px solid var(--tertiary);
   font-size: 2rem;
   font-weight: 600;
-  border-bottom: 2px solid var(--tertiary);
-  padding: 0.75rem;
 }
 
 .search-sectionInnerDiv,
@@ -625,35 +625,35 @@ body {
 
 .createListing-form input,
 .createListing-form textarea {
-  background-color: var(--additional);
   border: 3px solid var(--tertiary);
+  background: var(--additional);
 }
 
 .createListing-form button {
-  background-color: var(--primary);
   border: 3px solid var(--secondary);
+  background: var(--primary);
   color: var(--secondary);
 }
 
 .createListing-checkbox {
-  accent-color: var(--secondary);
   width: 1.25rem;
+  accent-color: var(--secondary);
   cursor: pointer;
 }
 
 input[type="file"]::file-selector-button {
-  cursor: pointer;
+  border: 2px solid var(--secondary);
   background: var(--primary);
   color: var(--secondary);
-  border: 2px solid var(--secondary);
+  cursor: pointer;
 }
 
 .createListing-imagesContainer {
-  border: 2px solid var(--secondary);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem;
+  border: 2px solid var(--secondary);
 }
 
 /* Update Listing Page */
@@ -669,19 +669,19 @@ input[type="file"]::file-selector-button {
 
 .updateListing-form input,
 .updateListing-form textarea {
-  background-color: var(--additional);
   border: 3px solid var(--tertiary);
+  background: var(--additional);
 }
 
 .updateListing-form button {
-  background-color: var(--primary);
   border: 3px solid var(--secondary);
+  background: var(--primary);
   color: var(--secondary);
 }
 
 .updateListing-checkbox {
-  accent-color: var(--secondary);
   width: 1.25rem;
+  accent-color: var(--secondary);
   cursor: pointer;
 }
 
@@ -691,8 +691,8 @@ input[type="file"]::file-selector-button {
 
 /* Listing Page */
 .listing-main {
-  border-top: 2px solid var(--secondary);
   padding-top: 1rem;
+  border-top: 2px solid var(--secondary);
 }
 
 .listing-shareBtn {
