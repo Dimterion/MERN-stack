@@ -696,43 +696,43 @@ input[type="file"]::file-selector-button {
 }
 
 .listing-shareBtn {
-  background: var(--additional);
-  border: 2px solid var(--secondary);
   position: absolute;
   top: 0%;
   right: 1%;
   z-index: 10;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px;
+  border: 2px solid var(--secondary);
+  background: var(--additional);
+  cursor: pointer;
 }
 
 .listing-shareBtnText {
-  background: var(--additional);
-  border: 2px solid var(--secondary);
   position: absolute;
   top: 5%;
   right: 1%;
   z-index: 10;
   padding: 1px;
+  border: 2px solid var(--secondary);
+  background: var(--additional);
   font-size: 0.9rem;
 }
 
 .listing-type {
-  background: var(--additional);
   width: 100%;
   max-width: 200px;
-  text-align: center;
   padding: 6px 0 4px;
+  background: var(--additional);
+  text-align: center;
 }
 
 .listing-contactBtn {
-  background: var(--additional);
-  text-transform: uppercase;
   padding: 10px 0;
   margin: 1rem;
+  background: var(--additional);
+  text-transform: uppercase;
 }
 
 .listing-contactBtn:hover {
@@ -746,33 +746,33 @@ input[type="file"]::file-selector-button {
 
 .profile-form input,
 .profile-form textarea {
-  background-color: var(--additional);
   border: 3px solid var(--tertiary);
+  background: var(--additional);
 }
 
 .profile-form button {
-  background-color: var(--primary);
   border: 3px solid var(--secondary);
+  background: var(--primary);
   color: var(--secondary);
 }
 
 .profile-img {
-  height: 100px;
   width: 100px;
+  height: 100px;
   object-fit: cover;
-  cursor: pointer;
-  margin: auto;
   border: 2px solid var(--secondary);
+  margin: auto;
   background: var(--tertiary);
+  cursor: pointer;
 }
 
 .profile-link {
-  background-color: var(--primary);
-  border: 3px solid var(--secondary);
-  color: var(--secondary);
-  text-transform: uppercase;
   padding: 0.75rem;
+  border: 3px solid var(--secondary);
+  background: var(--primary);
+  color: var(--secondary);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .profile-link:hover {
@@ -780,27 +780,27 @@ input[type="file"]::file-selector-button {
 }
 
 .profile-listingContainer {
-  border: 2px solid var(--secondary);
-  padding: 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  padding: 0.75rem;
+  border: 2px solid var(--secondary);
 }
 
 /* Contact Component */
 .contact-textarea {
-  border: 2px solid var(--tertiary);
   width: 100%;
   padding: 0.75rem;
+  border: 2px solid var(--tertiary);
   outline: none;
 }
 
 .contact-sendBtn {
-  text-align: center;
   padding: 0.75rem;
-  text-transform: uppercase;
   margin: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .contact-sendBtn:hover {
