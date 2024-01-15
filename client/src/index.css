@@ -816,16 +816,16 @@ input[type="file"]::file-selector-button {
 .skills-article {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   margin: 0.25rem;
 }
 
 .skills-articleActive {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   border: 2px solid var(--secondary);
   margin: 0.25rem;
 }
@@ -835,10 +835,10 @@ input[type="file"]::file-selector-button {
 }
 
 .quote-container {
-  border: 2px solid var(--secondary);
   width: 360px;
   max-width: 90vw;
   padding: 0.5rem;
+  border: 2px solid var(--secondary);
   margin: 5rem auto;
   text-align: end;
 }
@@ -846,18 +846,18 @@ input[type="file"]::file-selector-button {
 /* Objectives Component */
 .objectives-article {
   padding: 0.75rem;
-  margin: 1rem;
   border: 2px solid var(--secondary);
+  margin: 1rem;
 }
 
 .objectives-fieldset {
-  border: 2px solid var(--secondary);
-  margin-top: 1.5rem;
-  padding: 0.75rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0.75rem;
+  border: 2px solid var(--secondary);
+  margin-top: 1.5rem;
 }
 
 .objectives-article,
@@ -868,14 +868,14 @@ input[type="file"]::file-selector-button {
 }
 
 .objectives-subFieldset {
+  padding: 0.75rem;
   border: 2px solid var(--secondary);
   margin-top: 1.5rem;
-  padding: 0.75rem;
 }
 
 .objectives-ul {
-  font-size: 1.2rem;
   margin-left: 1rem;
+  font-size: 1.2rem;
 }
 
 .objectives-ul,
@@ -887,29 +887,29 @@ li {
   position: relative;
   width: 100px;
   height: 100px;
-  background: #edede9;
-  border-radius: 60%;
   border: 5px solid #000814;
+  border-radius: 60%;
+  background: #edede9;
 }
 
 .objectives-imgHelmet {
   position: absolute;
-  left: -5px;
   top: -5px;
+  left: -5px;
   width: 100px;
   height: 60px;
-  background: #8d99ae;
   border-radius: 30px 30px 0 0;
+  background: #8d99ae;
 }
 
 .objectives-imgHelmetActive {
   position: absolute;
-  left: -5px;
   top: -5px;
+  left: -5px;
   width: 100px;
   height: 60px;
-  background: #000814;
   border-radius: 30px 30px 0 0;
+  background: #000814;
 }
 
 .objectives-imgVisor {
