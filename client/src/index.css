@@ -959,13 +959,22 @@ li {
   background: var(--secondary);
 }
 
+/* Archives Component */
+.archives-article {
+  overflow: hidden;
+  padding-bottom: 0.75rem;
+  border: 2px solid var(--secondary);
+  margin: 0.75rem 0;
+  text-align: center;
+}
+
 /* Overview Component */
 .overview-article {
   max-width: 600px;
-  margin: auto;
-  border: 2px solid var(--secondary);
-  text-align: center;
   padding: 0.5rem;
+  border: 2px solid var(--secondary);
+  margin: auto;
+  text-align: center;
 }
 
 .overview-article > div {
@@ -976,12 +985,12 @@ li {
   max-width: 85vw;
   max-height: 50vh;
   object-fit: cover;
-  margin: auto;
   border: 2px solid var(--secondary);
-  animation: overview-articleImg 2s linear;
+  margin: auto;
+  animation: overview-articleImgAppear 2s linear;
 }
 
-@keyframes overview-articleImg {
+@keyframes overview-articleImgAppear {
   from {
     opacity: 0;
   }
@@ -992,12 +1001,38 @@ li {
 }
 
 .overview-articleHeadingOne {
-  animation: overview-articleHeading 4s linear;
   margin: 0.5rem;
   font-size: 2.25rem;
+  animation: overview-articleTextAppear 4s linear;
 }
 
-@keyframes overview-articleHeading {
+.overview-articleHeadingTwo {
+  margin: 0.25rem;
+  font-size: 1.5rem;
+  animation: overview-articleTextAppear 6s linear;
+}
+
+.overview-articleHeadingThree {
+  margin: 0.25rem;
+  font-size: 1.25rem;
+  animation: overview-articleTextAppear 8s linear;
+}
+
+.overview-articleParagraph {
+  padding: 0 2.5rem;
+  margin: 0.25rem;
+  text-align: start;
+  animation: overview-articleTextAppear 12s linear;
+}
+
+.overview-articleDiv {
+  padding: 0 3rem;
+  margin: 0.5rem 0;
+  text-align: start;
+  animation: overview-articleTextAppear 14s linear;
+}
+
+@keyframes overview-articleTextAppear {
   0% {
     opacity: 0;
   }
@@ -1011,41 +1046,6 @@ li {
   }
 }
 
-.overview-articleHeadingTwo {
-  margin: 0.25rem;
-  font-size: 1.5rem;
-  animation: overview-articleHeading 6s linear;
-}
-
-.overview-articleHeadingThree {
-  margin: 0.25rem;
-  font-size: 1.25rem;
-  animation: overview-articleHeading 8s linear;
-}
-
-.overview-articleParagraph {
-  margin: 0.25rem;
-  text-align: start;
-  padding: 0 2.5rem;
-  animation: overview-articleHeading 12s linear;
-}
-
-.overview-articleDiv {
-  text-align: start;
-  margin: 0.5rem 0;
-  padding: 0 3rem;
-  animation: overview-articleHeading 14s linear;
-}
-
 .overview-articleSpan {
   text-decoration: line-through;
-}
-
-/* Archives Component */
-.archives-article {
-  border: 2px solid var(--secondary);
-  text-align: center;
-  padding-bottom: 0.75rem;
-  margin: 0.75rem 0;
-  overflow: hidden;
 }
