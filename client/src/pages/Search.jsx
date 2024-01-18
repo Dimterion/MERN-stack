@@ -149,9 +149,6 @@ export default function Search() {
           <div className="search-sectionInnerDiv">
             <form onSubmit={handleSubmit} className="search-form">
               <div className="flex items-center gap-2">
-                <label className="whitespace-nowrap font-semibold uppercase">
-                  Search:
-                </label>
                 <input
                   type="text"
                   id="searchTerm"
@@ -246,7 +243,7 @@ export default function Search() {
           </div>
           <div className="flex-1">
             <h1 className="search-hOne">Results</h1>
-            <div className="p-7 flex flex-wrap gap-4">
+            <div className="p-7 flex flex-wrap gap-4 lg:justify-start justify-center">
               {!loading && listings.length === 0 && (
                 <p className="text-xl">No listings found.</p>
               )}
