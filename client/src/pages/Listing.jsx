@@ -122,25 +122,25 @@ export default function Listing() {
               </p>
               <ul className="font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6 mt-2">
                 <li className="flex items-center gap-1 whitespace-nowrap">
-                  <FaRegClock className="text-lg" />
+                  <FaRegClock className="text-xl mr-1" />
                   {listing.hours > 1
                     ? `${listing.hours} hours`
                     : `${listing.hours} hour`}
                 </li>
                 <li className="flex items-center gap-1 whitespace-nowrap">
-                  <FaListUl className="text-lg" />
+                  <FaListUl className="text-xl mr-1" />
                   {listing.parts > 1
                     ? `${listing.parts} parts`
                     : `${listing.parts} part`}
                 </li>
                 <li className="flex items-center gap-1 whitespace-nowrap">
-                  <FaGraduationCap className="text-lg" />
+                  <FaGraduationCap className="text-xl mr-1" />
                   {listing.certificate
                     ? "Certificate of completion"
                     : "No certificate of completion"}
                 </li>
                 <li className="flex items-center gap-1 whitespace-nowrap">
-                  <FaUserFriends className="text-lg" />
+                  <FaUserFriends className="text-xl mr-1" />
                   {listing.community ? "Community" : "No community"}
                 </li>
               </ul>
