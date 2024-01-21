@@ -165,14 +165,14 @@ export default function Home() {
               (former Codetroit)
             </p>
           </div>
-          <div className="max-w-6xl mx-auto p-3 flex-col gap-8 my-6">
+          <div className="max-w-6xl p-6 mx-auto my-6">
             {offerListings.length === 0 &&
               subscriptionListings.length === 0 &&
               oneTimePurchaseListings.length === 0 && <p>No listings found.</p>}
             {offerListings && offerListings.length > 0 && (
               <>
                 <div className="my-3">
-                  <h2 className="text-2xl font-semibold">Recent offers</h2>
+                  <h2 className="text-2xl font-semibold mb-1">Recent offers</h2>
                   <Link
                     className="text-sm hover:underline"
                     to={"/search?offer=true"}
@@ -190,7 +190,7 @@ export default function Home() {
             {subscriptionListings && subscriptionListings.length > 0 && (
               <>
                 <div className="my-3">
-                  <h2 className="text-2xl font-semibold">
+                  <h2 className="text-2xl font-semibold mb-1">
                     Subscription-based courses
                   </h2>
                   <Link
@@ -210,7 +210,7 @@ export default function Home() {
             {oneTimePurchaseListings && oneTimePurchaseListings.length > 0 && (
               <>
                 <div className="my-3">
-                  <h2 className="text-2xl font-semibold">
+                  <h2 className="text-2xl font-semibold mb-1">
                     One-time purchase courses
                   </h2>
                   <Link
