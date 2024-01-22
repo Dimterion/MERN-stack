@@ -65,7 +65,7 @@ export default function Listing() {
         )}
         {listing && !loading && !error && (
           <div className="relative">
-            <Swiper navigation>
+            <Swiper navigation className="border-b-2 border-current pb-4">
               {listing.imageUrls.map((url) => (
                 <SwiperSlide key={url}>
                   <div
@@ -116,11 +116,11 @@ export default function Listing() {
                   </p>
                 )}
               </div>
-              <p className="mt-2">
+              <p className="mt-2 border-t-2 border-current pt-6">
                 <span className="font-semibold uppercase">Description: </span>
                 {listing.description}
               </p>
-              <ul className="font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6 mt-2">
+              <ul className="font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6 mt-2 border-b-2 border-t-2 pb-2 pt-2 border-current">
                 <li className="flex items-center gap-1 whitespace-nowrap">
                   <FaRegClock className="text-xl mr-1" />
                   {listing.hours > 1
