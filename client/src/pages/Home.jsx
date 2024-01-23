@@ -165,7 +165,7 @@ export default function Home() {
               (former Codetroit)
             </p>
           </div>
-          <div className="max-w-6xl p-6 mx-auto my-6">
+          <div className="max-w-6xl p-4 mx-auto my-6">
             {offerListings.length === 0 &&
               subscriptionListings.length === 0 &&
               oneTimePurchaseListings.length === 0 && <p>No listings found.</p>}

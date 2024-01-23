@@ -384,7 +384,7 @@ body {
   overflow: hidden;
   width: 100%;
   max-width: 330px;
-  border: 1px solid var(--tertiary);
+  border: 2px solid var(--secondary);
   background: rgba(0, 0, 0, 0.5);
 }
 

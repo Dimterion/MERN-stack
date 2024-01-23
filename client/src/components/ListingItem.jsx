@@ -14,7 +14,9 @@ export default function ListingItem({ listing }) {
           className="h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300"
         />
         <div className="p-3 flex flex-col gap-2 w-full">
-          <p className="truncate text-lg font-semibold ">{listing.name}</p>
+          <p className="truncate text-lg font-semibold italic">
+            {listing.name}
+          </p>
           <p className="text-sm line-clamp-2">{listing.description}</p>
           <p className="mt-2 font-semibold">
             {listing.offer
