@@ -146,7 +146,7 @@ export default function Home() {
                         background: `url(${listing.imageUrls[0]}) center no-repeat`,
                         backgroundSize: "cover",
                       }}
-                      className="h-[350px] w-[1000px] m-auto max-w-[90vw] max-h-[50vh]"
+                      className="h-[350px] w-[1000px] m-auto max-w-[90vw] max-h-[50vh] border-2 border-current"
                     ></div>
                   </Link>
                 </SwiperSlide>
